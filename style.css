@@ -70,8 +70,11 @@ body{
 
     text-align:center;
 
-    padding:25px 20px 15px;
+    max-width:420px;
 
+    margin:0 auto;
+
+    padding:20px;
 }
 
 #logoGrande{
@@ -80,7 +83,7 @@ body{
 
     height:min(80vw,360px);
 
-    object-fit:cover;
+    object-fit:contain;
 
     border-radius:35px;
 
@@ -94,13 +97,19 @@ body{
 
 #radioNombre{
 
+    margin-top:18px;
+
+    margin-bottom:10px;
+
+    font-size:22px;
+
+    font-weight:700;
+
     text-align:center;
 
     width:100%;
 
-    margin-left:auto;
-
-    margin-right:auto;
+    display:block;
 }
 
 .live{
@@ -331,4 +340,3 @@ body{
 
     color:#29C7F6;
 }
-
