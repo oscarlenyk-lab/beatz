@@ -1,16 +1,18 @@
-const CACHE_NAME = "beatstream-v1";
+const CACHE_NAME = "beatstream-v2";
 
 const urlsToCache = [
 
-"./",
-"./index.html",
-"./style.css",
-"./app.js",
-"./manifest.json"
+    "./",
+    "./index.html",
+    "./style.css",
+    "./app.js",
+    "./manifest.json"
 
 ];
 
 self.addEventListener("install", event => {
+
+    self.skipWaiting();
 
     event.waitUntil(
 
@@ -23,13 +25,41 @@ self.addEventListener("install", event => {
 
 });
 
+self.addEventListener("activate", event => {
+
+    event.waitUntil(
+
+        caches.keys().then(cacheNames => {
+
+            return Promise.all(
+
+                cacheNames.map(cache => {
+
+                    if(cache !== CACHE_NAME){
+
+                        return caches.delete(cache);
+
+                    }
+
+                })
+
+            );
+
+        })
+
+    );
+
+    self.clients.claim();
+
+});
+
 self.addEventListener("fetch", event => {
 
     event.respondWith(
 
-        caches.match(event.request)
-        .then(response =>
-            response || fetch(event.request)
+        fetch(event.request)
+        .catch(() =>
+            caches.match(event.request)
         )
 
     );
