@@ -70,14 +70,15 @@ body{
 
     text-align:center;
 
-    padding:30px 20px;
+    padding:25px 20px 15px;
+
 }
 
 #logoGrande{
 
-    width:min(85vw,420px);
+    width:min(80vw,360px);
 
-    height:min(85vw,420px);
+    height:min(80vw,360px);
 
     object-fit:cover;
 
@@ -93,13 +94,17 @@ body{
 
 #radioNombre{
 
-    margin-top:22px;
+    margin-top:18px;
 
-    margin-bottom:8px;
+    margin-bottom:10px;
 
-    font-size:24px;
+    font-size:22px;
 
     font-weight:700;
+
+    text-align:center;
+
+    width:100%;
 }
 
 .live{
@@ -110,7 +115,11 @@ body{
 
     letter-spacing:.5px;
 
-    margin-bottom:15px;
+    margin-bottom:18px;
+
+    text-align:center;
+
+    width:100%;
 }
 
 audio{
@@ -118,6 +127,10 @@ audio{
     width:90%;
 
     max-width:350px;
+
+    margin:0 auto 20px;
+
+    display:block;
 }
 
 .radios-grid{
@@ -325,4 +338,3 @@ body{
 
     color:#29C7F6;
 }
-
