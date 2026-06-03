@@ -1,11 +1,12 @@
-const CACHE_NAME = "radios-v1";
+const CACHE_NAME = "beatstream-v1";
 
 const urlsToCache = [
 
-"/",
-"/index.html",
-"/style.css",
-"/app.js"
+"./",
+"./index.html",
+"./style.css",
+"./app.js",
+"./manifest.json"
 
 ];
 
