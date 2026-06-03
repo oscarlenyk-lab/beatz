@@ -26,8 +26,30 @@ stream:"https://cdn-peer022.streaming-pro.com:8024/ibizaglobalradio.mp3"
 
 ];
 
+const tvs = [
+
+{
+    nombre:"m2o TV",
+    logo:"logos/m2o.png",
+    stream:"https://streamcdnc2-4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S62628868/uhdWBlkC1AoO/playlist.m3u8"
+},
+
+{
+    nombre:"Deejay TV",
+    logo:"logos/deejay.png",
+    stream:"https://streamcdnc1-4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S85984808/sMO0tz9Sr2Rk/playlist.m3u8"
+}
+
+];
+
 const radiosGrid =
 document.getElementById("radios");
+
+const tvsGrid =
+document.getElementById("tvs");
+
+const tvPlayer =
+document.getElementById("tvPlayer");
 
 const logoGrande =
 document.getElementById("logoGrande");
@@ -90,6 +112,45 @@ function cargarRadio(radio){
 
 }
 
+function cargarTV(tv){
+
+    logoGrande.src = tv.logo;
+
+    radioNombre.textContent =
+    tv.nombre;
+
+    player.pause();
+
+    tvPlayer.style.display =
+    "block";
+
+    if(Hls.isSupported()){
+
+        if(window.tvHls){
+            window.tvHls.destroy();
+        }
+
+        window.tvHls =
+        new Hls();
+
+        window.tvHls.loadSource(
+            tv.stream
+        );
+
+        window.tvHls.attachMedia(
+            tvPlayer
+        );
+
+    }else{
+
+        tvPlayer.src =
+        tv.stream;
+
+    }
+
+    tvPlayer.play();
+
+}
 radios.forEach(radio => {
 
     const card =
@@ -117,6 +178,28 @@ radios.forEach(radio => {
     });
 
     radiosGrid.appendChild(card);
+
+});
+
+tvs.forEach(tv => {
+
+    const card =
+    document.createElement("div");
+
+    card.className = "radio";
+
+    card.innerHTML = `
+        <img src="${tv.logo}">
+        <p>${tv.nombre}</p>
+    `;
+
+    card.addEventListener("click",()=>{
+
+        cargarTV(tv);
+
+    });
+
+    tvsGrid.appendChild(card);
 
 });
 
