@@ -48,6 +48,9 @@ document.getElementById("radios");
 const tvsGrid =
 document.getElementById("tvs");
 
+console.log("TVS GRID:", tvsGrid);
+console.log("TVS:", tvs);
+
 const tvPlayer =
 document.getElementById("tvPlayer");
 
@@ -180,6 +183,12 @@ radios.forEach(radio => {
     radiosGrid.appendChild(card);
 
 });
+
+tvsGrid.innerHTML = `
+<div class="radio">
+    <p>PRUEBA TV</p>
+</div>
+`;
 
 tvs.forEach(tv => {
 
