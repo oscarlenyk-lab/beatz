@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BeatStream</title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#29C7F6">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>BeatStream</h1>
+
+    <p class="tagline">
+        Electronic Music Worldwide
+    </p>
+</div>
+
+<div class="player-section">
+
+    <img id="logoGrande"
+         src="logos/m2o.png"
+         alt="Radio">
+
+    <h2 id="radioNombre">
+    Bienvenido a BeatStream
+	</h2>
+
+    <div class="live">
+        🔵 EN VIVO
+    </div>
+
+    <audio id="player" controls></audio>
+
+</div>
+
+<div id="radios" class="radios-grid"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="app.js"></script>
+
+</body>
+
+</html>

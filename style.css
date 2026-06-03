@@ -1,0 +1,356 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+
+    margin:0;
+
+    background:#F8F9FB;
+
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+
+    color:#111;
+
+}
+
+.app{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.header{
+
+    background:
+    linear-gradient(
+        135deg,
+        #29C7F6,
+        #7DE3FF
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    box-shadow:
+    0 3px 10px rgba(0,0,0,.1);
+}
+
+.header h1{
+
+    margin:0;
+
+    font-size:28px;
+
+    font-weight:700;
+}
+
+.tagline{
+
+    margin-top:8px;
+
+    margin-bottom:0;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    color:rgba(255,255,255,.9);
+
+    letter-spacing:1px;
+}
+
+#logoGrande{
+
+    width:300px;
+
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:35px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.12);
+
+    animation:pulse 3s infinite;
+}
+
+#radioNombre{
+
+    margin-top:20px;
+
+    margin-bottom:10px;
+
+    font-size:28px;
+}
+
+.live{
+
+    color:#29C7F6;
+
+    font-weight:bold;
+
+    margin-bottom:15px;
+}
+
+audio{
+
+    width:100%;
+}
+
+.radios-grid{
+
+    padding:20px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:20px;
+}
+
+.radio{
+
+    border-radius:20px;
+
+    padding:15px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:
+    0 3px 10px rgba(0,0,0,.08);
+}
+
+.radio:hover{
+
+    transform:translateY(-3px);
+}
+
+.radio img{
+
+    width:80px;
+
+    height:80px;
+
+    object-fit:contain;
+
+    border-radius:20px;
+}
+
+.radio p{
+
+    margin-top:10px;
+
+    margin-bottom:0;
+
+    font-weight:600;
+}
+
+.radio.activa{
+
+    border:3px solid #29C7F6;
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.03);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+/* Logo */
+.radio img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Texto */
+.radio h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Botón */
+.radio button {
+    margin-left: auto;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    background: #29C7F6;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.radio button:hover {
+    background: #17a74a;
+}
+
+/* Reproductor fijo abajo */
+#audio-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #181818;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #333;
+}
+.radio.activa {
+    border: 2px solid #29C7F6;
+    box-shadow: 0 0 15px rgba(29, 185, 84, 0.5);
+    background: #252525;
+}
+
+@keyframes rotateAlbum {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.reproduciendo {
+
+    animation:
+    rotateAlbum 40s linear infinite;
+}
+
+/* Modo pantalla completa */
+
+.fullscreen .player-section{
+
+    min-height: 90vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.fullscreen #logoGrande{
+
+    width:90vw;
+
+    height:90vw;
+
+    max-width:500px;
+
+    max-height:500px;
+
+    transition:all .4s ease;
+}
+
+.mini-player{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    right:0;
+
+    height:70px;
+
+    background:white;
+
+    border-top:1px solid #e5e5e5;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:10px 15px;
+
+    box-shadow:
+    0 -2px 10px rgba(0,0,0,.05);
+}
+
+#miniLogo{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:12px;
+
+    object-fit:cover;
+}
+
+#miniNombre{
+
+    font-weight:600;
+
+    flex:1;
+}
+body{
+    padding-bottom:90px;
+}
+
+#splash{
+
+    position:fixed;
+
+    inset:0;
+
+    background:white;
+
+    z-index:9999;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+}
+
+#splash img{
+
+    width:180px;
+}
+
+#splash h1{
+
+    color:#29C7F6;
+}
+
