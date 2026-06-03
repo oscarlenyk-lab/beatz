@@ -17,15 +17,6 @@ body{
 
 }
 
-.app{
-
-    min-height:100vh;
-
-    display:flex;
-
-    flex-direction:column;
-}
-
 .header{
 
     background:
@@ -40,6 +31,8 @@ body{
     text-align:center;
 
     padding:18px;
+
+}
 
 .header h1{
 
@@ -197,15 +190,6 @@ audio{
         transform:scale(1);
     }
 }
-
-/* Logo */
-.radio img {
-    width: 70px;
-    height: 70px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
 
 .radio.activa{
 
