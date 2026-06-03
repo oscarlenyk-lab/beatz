@@ -75,9 +75,9 @@ body{
 
 #logoGrande{
 
-    width:min(70vw,320px);
+    width:min(85vw,420px);
 
-    height:min(70vw,320px);
+    height:min(85vw,420px);
 
     object-fit:cover;
 
@@ -115,12 +115,14 @@ body{
 
 audio{
 
-    width:100%;
+    width:90%;
+
+    max-width:350px;
 }
 
 .radios-grid{
 
-    padding:20px;
+    padding:10px 20px 30px;
 
     display:grid;
 
