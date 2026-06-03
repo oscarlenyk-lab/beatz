@@ -20,7 +20,7 @@ stream:"https://playerservices.streamtheworld.com/api/livestream-redirect/OWR_IN
 
 {
 nombre:"Ibiza Global Radio",
-logo:"logos/ibiza.png",
+logo:"logos/Ibiza.png",
 stream:"https://cdn-peer022.streaming-pro.com:8024/ibizaglobalradio.mp3"
 }
 
