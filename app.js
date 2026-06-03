@@ -184,12 +184,6 @@ radios.forEach(radio => {
 
 });
 
-tvsGrid.innerHTML = `
-<div class="radio">
-    <p>PRUEBA TV</p>
-</div>
-`;
-
 tvs.forEach(tv => {
 
     const card =
