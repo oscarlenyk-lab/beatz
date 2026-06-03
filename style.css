@@ -94,17 +94,13 @@ body{
 
 #radioNombre{
 
-    margin-top:18px;
-
-    margin-bottom:10px;
-
-    font-size:22px;
-
-    font-weight:700;
-
     text-align:center;
 
     width:100%;
+
+    margin-left:auto;
+
+    margin-right:auto;
 }
 
 .live{
