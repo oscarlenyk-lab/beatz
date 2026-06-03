@@ -340,3 +340,47 @@ body{
 
     color:#29C7F6;
 }
+
+.player-controls{
+
+    margin:20px 0;
+}
+
+#playBtn{
+
+    width:80px;
+
+    height:80px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #29C7F6,
+        #7DE3FF
+    );
+
+    color:white;
+
+    font-size:32px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 8px 20px rgba(41,199,246,.4);
+
+    transition:.3s;
+}
+
+#playBtn:active{
+
+    transform:scale(.95);
+}
+
+#playBtn:hover{
+
+    transform:scale(1.05);
+}
