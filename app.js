@@ -19,7 +19,7 @@ stream:"https://playerservices.streamtheworld.com/api/livestream-redirect/OWR_IN
 },
 
 {
-nombre:"Ibiza Global Radio",
+nombre:"ibiza Global Radio",
 logo:"logos/ibiza.png",
 stream:"https://cdn-peer022.streaming-pro.com:8024/ibizaglobalradio.mp3"
 }
@@ -37,6 +37,9 @@ document.getElementById("radioNombre");
 
 const player =
 document.getElementById("player");
+
+const playBtn =
+document.getElementById("playBtn");
 
 function cargarRadio(radio){
 
@@ -170,5 +173,30 @@ logoGrande.addEventListener("click", () => {
     document.body.classList.toggle(
         "fullscreen"
     );
+
+});
+playBtn.addEventListener("click",()=>{
+
+    if(player.paused){
+
+        player.play();
+
+    }else{
+
+        player.pause();
+
+    }
+
+});
+
+player.addEventListener("play",()=>{
+
+    playBtn.textContent = "⏸";
+
+});
+
+player.addEventListener("pause",()=>{
+
+    playBtn.textContent = "▶";
 
 });
