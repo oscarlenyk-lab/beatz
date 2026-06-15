@@ -249,9 +249,12 @@ shows.forEach(show => {
     card.className = "radio";
 
     card.innerHTML = `
-        <img src="${show.logo}">
-        <p>${show.nombre}</p>
-    `;
+    <img src="${show.logo}">
+    <p>${show.nombre}</p>
+    <small class="show-time">
+        ${show.horario}
+    </small>
+`;
 
     card.addEventListener("click",()=>{
 
