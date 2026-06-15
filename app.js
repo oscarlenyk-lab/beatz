@@ -42,11 +42,42 @@ const tvs = [
 
 ];
 
+const shows = [
+
+{
+nombre:"A State of Trance",
+logo:"logos/asot.png",
+youtube:"https://www.youtube.com/@astateoftrance"
+},
+
+{
+nombre:"Group Therapy",
+logo:"logos/grouptherapy.png",
+youtube:"https://www.youtube.com/@anjunabeats"
+},
+
+{
+nombre:"Future Sound of Egypt",
+logo:"logos/fsoe.png",
+youtube:"https://www.youtube.com/@FutureSoundOfEgypt"
+},
+
+{
+nombre:"Corsten's Countdown",
+logo:"logos/corsten.png",
+youtube:"https://www.youtube.com/@ferrycorsten"
+}
+
+];
+
 const radiosGrid =
 document.getElementById("radios");
 
 const tvsGrid =
 document.getElementById("tvs");
+
+const showsGrid =
+document.getElementById("shows");
 
 console.log("TVS GRID:", tvsGrid);
 console.log("TVS:", tvs);
@@ -203,6 +234,31 @@ tvs.forEach(tv => {
     });
 
     tvsGrid.appendChild(card);
+
+});
+
+shows.forEach(show => {
+
+    const card =
+    document.createElement("div");
+
+    card.className = "radio";
+
+    card.innerHTML = `
+        <img src="${show.logo}">
+        <p>${show.nombre}</p>
+    `;
+
+    card.addEventListener("click",()=>{
+
+        window.open(
+            show.youtube,
+            "_blank"
+        );
+
+    });
+
+    showsGrid.appendChild(card);
 
 });
 
