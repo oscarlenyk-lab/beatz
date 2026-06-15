@@ -436,3 +436,16 @@ body{
     box-shadow:
     0 10px 25px rgba(0,0,0,.15);
 }
+
+.show-time{
+
+    display:block;
+
+    margin-top:6px;
+
+    color:#666;
+
+    font-size:12px;
+
+    font-weight:600;
+}
