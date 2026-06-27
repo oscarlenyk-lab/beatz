@@ -40,6 +40,12 @@ const tvs = [
     stream:"https://streamcdnc1-4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S85984808/sMO0tz9Sr2Rk/playlist.m3u8"
 },
 
+    {
+    nombre:"Power Dance TV",
+    logo:"logos/powerdance.png",
+    stream:"https://livetv.powerapp.com.tr/dance/dance.smil/playlist.m3u8"
+},
+
 {
     nombre:"Number 1 Dance",
     logo:"logos/number1dance.png",
