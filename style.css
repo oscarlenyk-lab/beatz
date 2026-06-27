@@ -468,3 +468,22 @@ body{
 
     font-weight:600;
 }
+
+#playBtn.playing{
+
+    background:
+    linear-gradient(
+        135deg,
+        #29C7F6,
+        #7DE3FF
+    );
+
+    color:white;
+
+    border-color:#29C7F6;
+
+    box-shadow:
+    0 0 18px rgba(41,199,246,.55),
+    0 0 35px rgba(41,199,246,.30);
+
+}
