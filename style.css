@@ -366,41 +366,42 @@ body{
 
 #playBtn{
 
-    width:80px;
+    width:68px;
 
-    height:80px;
-
-    border:none;
+    height:68px;
 
     border-radius:50%;
 
-    background:
-    linear-gradient(
-        135deg,
-        #29C7F6,
-        #7DE3FF
-    );
+    border:2px solid #29C7F6;
 
-    color:white;
+    background:white;
 
-    font-size:32px;
+    color:#29C7F6;
+
+    font-size:28px;
 
     cursor:pointer;
 
+    transition:all .30s ease;
+
     box-shadow:
-    0 8px 20px rgba(41,199,246,.4);
+    0 6px 18px rgba(41,199,246,.18);
 
-    transition:.3s;
-}
-
-#playBtn:active{
-
-    transform:scale(.95);
 }
 
 #playBtn:hover{
 
-    transform:scale(1.05);
+    transform:scale(1.06);
+
+    box-shadow:
+    0 10px 26px rgba(41,199,246,.30);
+
+}
+
+#playBtn:active{
+
+    transform:scale(.94);
+
 }
 
 .section-title{
