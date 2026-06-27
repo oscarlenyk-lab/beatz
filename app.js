@@ -358,8 +358,18 @@ player.addEventListener("play",()=>{
 
 });
 
+player.addEventListener("play",()=>{
+
+    playBtn.textContent = "⏸";
+
+    playBtn.classList.add("playing");
+
+});
+
 player.addEventListener("pause",()=>{
 
     playBtn.textContent = "▶";
+
+    playBtn.classList.remove("playing");
 
 });
