@@ -1,7 +1,7 @@
 const radios = [
 
 {
-nombre:"m2o Radio",
+nombre:"M2O Radio",
 logo:"logos/m2o.png",
 stream:"https://streamcdnb3-4c4b867c89244861ac216426883d1ad0.msvdn.net/radiom2o/radiom2o/play1.m3u8"
 },
@@ -40,27 +40,11 @@ const tvs = [
     stream:"https://streamcdnc1-4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S85984808/sMO0tz9Sr2Rk/playlist.m3u8"
 },
 
-    const tvs = [
-
-{
-    nombre:"m2o TV",
-    logo:"logos/m2o.png",
-    stream:"https://streamcdnc2-4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S62628868/uhdWBlkC1AoO/playlist.m3u8"
-},
-
-{
-    nombre:"Deejay TV",
-    logo:"logos/deejay.png",
-    stream:"https://streamcdnc1-4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S85984808/sMO0tz9Sr2Rk/playlist.m3u8"
-},
-
 {
     nombre:"Number 1 Dance",
     logo:"logos/number1dance.png",
     stream:"https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8"
 }
-
-];
 
 ];
 
