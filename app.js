@@ -164,6 +164,8 @@ function cargarRadio(radio){
 
 function cargarTV(tv){
 
+    logoGrande.classList.remove("reproduciendo");
+
     logoGrande.src = tv.logo;
 
     radioNombre.textContent =
