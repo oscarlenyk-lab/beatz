@@ -415,15 +415,19 @@ body{
 
 .section-title{
 
-    position:relative;
-
     text-align:center;
 
-    margin:42px 0 22px;
+    margin:36px 0 18px;
 
-    font-size:24px;
+    font-size:18px;
 
-    font-weight:700;
+    font-weight:600;
+
+    color:#5F6B7A;
+
+    letter-spacing:.8px;
+
+    text-transform:uppercase;
 
 }
 
