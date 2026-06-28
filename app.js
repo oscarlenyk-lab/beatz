@@ -1,7 +1,7 @@
 const radios = [
 
 {
-    nombre:"m2o Radio",
+    nombre:"M2O Radio",
     descripcion:"Italy's Dance Station",
     logo:"logos/m2o.png",
     stream:"https://streamcdnb3-4c4b867c89244861ac216426883d1ad0.msvdn.net/radiom2o/radiom2o/play1.m3u8"
@@ -117,8 +117,8 @@ document.getElementById("radioDescripcion");
 const player =
 document.getElementById("player");
 
-const playBtn =
-document.getElementById("playBtn");
+const volumeSlider =
+document.getElementById("volumeSlider");
 
 function cargarRadio(radio){
 
@@ -351,32 +351,40 @@ logoGrande.addEventListener("click", () => {
     );
 
 });
-playBtn.addEventListener("click",()=>{
 
-    if(player.paused){
+/*=============================
+  CONTROL DE VOLUMEN
+==============================*/
 
-        player.play();
+const volumenGuardado =
+localStorage.getItem("volumen");
 
-    }else{
+if(volumenGuardado){
 
-        player.pause();
+    player.volume = volumenGuardado / 100;
 
-    }
+    volumeSlider.value = volumenGuardado;
 
-});
+}else{
 
-player.addEventListener("play",()=>{
+    player.volume = 0.7;
 
-    playBtn.textContent = "⏸";
+}
 
-    playBtn.classList.add("playing");
+volumeSlider.addEventListener("input",()=>{
 
-});
+    const volumen =
+    volumeSlider.value;
 
-player.addEventListener("pause",()=>{
+    player.volume =
+    volumen / 100;
 
-    playBtn.textContent = "▶";
+    tvPlayer.volume =
+    volumen / 100;
 
-    playBtn.classList.remove("playing");
+    localStorage.setItem(
+        "volumen",
+        volumen
+    );
 
 });
