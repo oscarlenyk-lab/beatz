@@ -79,13 +79,13 @@ body{
 
 #logoGrande{
 
-    width:min(80vw,360px);
+    width:min(68vw,300px);
 
-    height:min(80vw,360px);
+    height:min(68vw,300px);
 
     object-fit:contain;
 
-    border-radius:35px;
+    border-radius:30px;
 
     display:block;
 
@@ -93,6 +93,9 @@ body{
 
     box-shadow:
     0 12px 35px rgba(0,0,0,.12);
+
+    transition:.35s ease;
+
 }
 
 #radioNombre{
