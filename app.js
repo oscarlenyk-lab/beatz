@@ -387,4 +387,12 @@ volumeSlider.addEventListener("input",()=>{
         volumen
     );
 
+    <div class="youtube-badge">
+
+    <img src="logos/youtube.png">
+
+    <span>YouTube</span>
+
+</div>
+
 });
