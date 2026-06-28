@@ -605,17 +605,45 @@ audio{
 
 }
 
-.volume-control{
+#volumeSlider::-webkit-slider-thumb{
 
-    width:100%;
+    -webkit-appearance:none;
 
-    display:flex;
+    appearance:none;
 
-    align-items:center;
+    width:16px;
 
-    gap:10px;
+    height:16px;
 
-    margin-top:22px;
+    border-radius:50%;
+
+    background:#29C7F6;
+
+    box-shadow:
+
+        0 0 12px rgba(41,199,246,.35);
+
+    transition:.25s;
+
+}
+
+#volumeSlider:hover::-webkit-slider-thumb{
+
+    transform:scale(1.25);
+
+}
+
+#volumeSlider::-moz-range-thumb{
+
+    width:16px;
+
+    height:16px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#29C7F6;
 
 }
 
