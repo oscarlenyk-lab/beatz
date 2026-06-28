@@ -481,20 +481,6 @@ body{
 
 }
 
-#tvPlayer{
-
-    width:95%;
-
-    max-width:900px;
-
-    margin:20px auto;
-
-    border-radius:20px;
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,.15);
-}
-
 #playBtn.playing{
 
     background:
