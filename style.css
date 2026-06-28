@@ -651,3 +651,21 @@ audio{
     background:#29C7F6;
 
 }
+
+.youtube-badge{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:6px;
+
+    margin:8px 0 6px;
+
+    font-size:12px;
+
+    color:#777;
+
+}
