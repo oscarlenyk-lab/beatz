@@ -2,7 +2,7 @@
     box-sizing:border-box;
 }
 
-bbody{
+body{
 
     margin:0;
 
@@ -474,64 +474,6 @@ audio{
     color:#29C7F6;
 }
 
-.player-controls{
-
-    margin-top:28px;
-
-    margin-left:10px;
-
-}
-
-#playBtn{
-
-    width:68px;
-
-    height:68px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:50%;
-
-    border:2px solid #29C7F6;
-
-    background:white;
-
-    color:#29C7F6;
-
-    font-size:28px;
-
-    cursor:pointer;
-
-    transition:all .30s ease;
-
-    box-shadow:
-    0 6px 18px rgba(41,199,246,.18);
-
-    user-select:none;
-
-    -webkit-tap-highlight-color:transparent;
-
-}
-
-#playBtn:hover{
-
-    transform:scale(1.06);
-
-    box-shadow:
-    0 10px 26px rgba(41,199,246,.30);
-
-}
-
-#playBtn:active{
-
-    transform:scale(.94);
-
-}
-
 .section-title{
 
     position:relative;
@@ -627,6 +569,36 @@ audio{
 
 }
 
+.volume-control{
+
+    width:100%;
+
+    margin-top:18px;
+
+    padding:0 22px 12px;
+
+}
+
+#volumeSlider{
+
+    width:100%;
+
+    height:5px;
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    background:#D9EAF5;
+
+    border-radius:20px;
+
+    outline:none;
+
+    cursor:pointer;
+
+}
+
 #volumeSlider:hover::-webkit-slider-thumb{
 
     transform:scale(1.25);
@@ -644,30 +616,6 @@ audio{
     border-radius:50%;
 
     background:#29C7F6;
-
-}
-
-.volume-icon{
-
-    font-size:18px;
-
-    opacity:.65;
-
-}
-
-#volumeSlider{
-
-    flex:1;
-
-    height:6px;
-
-    appearance:none;
-
-    background:#D9EAF5;
-
-    border-radius:20px;
-
-    outline:none;
 
 }
 
