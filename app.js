@@ -275,8 +275,19 @@ shows.forEach(show => {
     card.innerHTML = `
     <img src="${show.logo}">
     <p>${show.nombre}</p>
+
+    <div class="youtube-badge">
+
+        <img src="logos/youtube.png">
+
+        <span>YouTube</span>
+
+    </div>
+
     <small class="show-time">
+
         ${show.horario}
+
     </small>
 `;
 
@@ -386,13 +397,5 @@ volumeSlider.addEventListener("input",()=>{
         "volumen",
         volumen
     );
-
-    <div class="youtube-badge">
-
-    <img src="logos/youtube.png">
-
-    <span>YouTube</span>
-
-</div>
 
 });
