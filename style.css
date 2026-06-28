@@ -150,22 +150,16 @@ audio{
     gap:20px;
 }
 
-.radio{
+.radios-grid{
 
-    background:white;
+    padding:8px 14px 24px;
 
-    border-radius:20px;
+    display:grid;
 
-    padding:15px;
+    grid-template-columns:
+    repeat(2,1fr);
 
-    text-align:center;
-
-    cursor:pointer;
-
-    transition:.25s;
-
-    box-shadow:
-    0 3px 10px rgba(0,0,0,.08);
+    gap:14px;
 }
 
 .radio:hover{
