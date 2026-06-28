@@ -91,7 +91,7 @@ body{
 
     align-items:center;
 
-    gap:26px;
+    gap:18px;
 
     box-shadow:
         0 10px 35px rgba(0,0,0,.08);
@@ -135,9 +135,9 @@ body{
 
 #radioNombre{
 
-    margin:12px 0 6px;
+    margin:10px 0 4px;
 
-    font-size:34px;
+    font-size:24px;
 
     font-weight:700;
 
@@ -151,11 +151,11 @@ body{
 
     margin:0;
 
-    color:#6D7685;
+    font-size:15px;
 
-    font-size:18px;
+    color:#7A7A7A;
 
-    font-weight:500;
+    white-space:nowrap;
 
 }
 
@@ -165,21 +165,21 @@ body{
 
     align-items:center;
 
-    padding:6px 16px;
+    gap:6px;
 
-    border-radius:30px;
+    padding:5px 12px;
+
+    border-radius:18px;
 
     background:#EAF8FF;
 
     color:#00A8F3;
 
-    font-size:15px;
+    font-size:13px;
 
     font-weight:700;
 
-    letter-spacing:.4px;
-
-    margin-bottom:8px;
+    margin-bottom:10px;
 
 }
 
