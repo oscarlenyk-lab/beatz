@@ -415,13 +415,34 @@ body{
 
 .section-title{
 
+    position:relative;
+
     text-align:center;
 
-    margin:25px 0 15px;
+    margin:42px 0 22px;
 
-    font-size:22px;
+    font-size:24px;
 
     font-weight:700;
+
+}
+
+.section-title::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-20px;
+
+    left:20%;
+
+    width:60%;
+
+    height:1px;
+
+    background:#E9EEF4;
+
 }
 
 #tvPlayer{
