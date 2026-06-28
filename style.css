@@ -654,7 +654,7 @@ audio{
 
 .youtube-badge{
 
-    display:flex;
+    display:inline-flex;
 
     align-items:center;
 
@@ -662,10 +662,38 @@ audio{
 
     gap:6px;
 
-    margin:8px 0 6px;
+    margin:8px auto 6px;
 
-    font-size:12px;
+    padding:4px 10px;
 
-    color:#777;
+    background:#FFF5F5;
+
+    border:1px solid #FFE0E0;
+
+    border-radius:20px;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    color:#D60000;
+
+}
+
+.youtube-badge img{
+
+    width:16px;
+
+    height:16px;
+
+    display:block;
+
+}
+
+.radio:hover .youtube-badge{
+
+    transform:scale(1.05);
+
+    transition:.20s ease;
 
 }
