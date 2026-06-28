@@ -214,17 +214,35 @@ audio{
 
 .radios-grid{
 
-    padding:8px 14px 24px;
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(2,1fr);
+    display:flex;
 
     gap:14px;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    padding:8px 14px 20px;
+
+    scroll-snap-type:x proximity;
+
+    scrollbar-width:none;
+
+}
+
+.radios-grid::-webkit-scrollbar{
+
+    display:none;
+
 }
 
 .radio{
+
+    flex:0 0 120px;
+
+    width:120px;
+
+    min-height:135px;
 
     background:white;
 
@@ -245,9 +263,7 @@ audio{
         box-shadow .20s ease;
 
     box-shadow:
-    0 3px 10px rgba(0,0,0,.08);
-
-    min-height:150px;
+        0 3px 10px rgba(0,0,0,.08);
 
 }
 
