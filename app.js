@@ -1,27 +1,31 @@
 const radios = [
 
 {
-nombre:"m2o Radio",
-logo:"logos/m2o.png",
-stream:"https://streamcdnb3-4c4b867c89244861ac216426883d1ad0.msvdn.net/radiom2o/radiom2o/play1.m3u8"
+    nombre:"M2O Radio",
+    descripcion:"Italy's Dance Station",
+    logo:"logos/m2o.png",
+    stream:"https://streamcdnb3-4c4b867c89244861ac216426883d1ad0.msvdn.net/radiom2o/radiom2o/play1.m3u8"
 },
 
 {
-nombre:"Radio Deejay",
-logo:"logos/deejay.png",
-stream:"https://streamcdnc1-4c4b867c89244861ac216426883d1ad0.msvdn.net/radiodeejay/radiodeejay/master_ma.m3u8"
+    nombre:"Radio Deejay",
+    descripcion:"One Nation, One Station",
+    logo:"logos/deejay.png",
+    stream:"https://streamcdnc1-4c4b867c89244861ac216426883d1ad0.msvdn.net/radiodeejay/radiodeejay/master_ma.m3u8"
 },
 
 {
-nombre:"One World Radio",
-logo:"logos/oneworld.jpg",
-stream:"https://playerservices.streamtheworld.com/api/livestream-redirect/OWR_INTERNATIONAL_ADP.m3u8"
+    nombre:"One World Radio",
+    descripcion:"The Sound of Tomorrowland",
+    logo:"logos/oneworld.jpg",
+    stream:"https://playerservices.streamtheworld.com/api/livestream-redirect/OWR_INTERNATIONAL_ADP.m3u8"
 },
 
 {
-nombre:"Ibiza Global Radio",
-logo:"logos/ibiza.png",
-stream:"https://cdn-peer022.streaming-pro.com:8024/ibizaglobalradio.mp3"
+    nombre:"Ibiza Global Radio",
+    descripcion:"The Sound of Ibiza",
+    logo:"logos/ibiza.png",
+    stream:"https://cdn-peer022.streaming-pro.com:8024/ibizaglobalradio.mp3"
 }
 
 ];
@@ -107,6 +111,9 @@ document.getElementById("logoGrande");
 const radioNombre =
 document.getElementById("radioNombre");
 
+const radioDescripcion =
+document.getElementById("radioDescripcion");
+
 const player =
 document.getElementById("player");
 
@@ -120,6 +127,9 @@ function cargarRadio(radio){
     radioNombre.textContent =
     radio.nombre;
 
+    radioDescripcion.textContent =
+    radio.descripcion;
+    
     if(Hls.isSupported() &&
        radio.stream.includes(".m3u8")){
 
@@ -301,6 +311,9 @@ if(ultimaRadio){
         radioNombre.textContent =
         radioGuardada.nombre;
 
+        radioDescripcion.textContent =
+        radioGuardada.descripcion;
+
     }
 }
 /* Animación del logo */
@@ -349,12 +362,6 @@ playBtn.addEventListener("click",()=>{
         player.pause();
 
     }
-
-});
-
-player.addEventListener("play",()=>{
-
-    playBtn.textContent = "⏸";
 
 });
 
