@@ -126,7 +126,11 @@ document.getElementById("playToggle");
 const playStatus =
 document.getElementById("playStatus");
 
+let radioActual = null;
+
 function cargarRadio(radio){
+
+    radioActual = radio;
 
     logoGrande.src = radio.logo;
 
@@ -322,6 +326,8 @@ if(ultimaRadio){
 
     if(radioGuardada){
 
+        radioActual = radioGuardada;
+
         logoGrande.src =
         radioGuardada.logo;
 
@@ -415,20 +421,21 @@ volumeSlider.addEventListener("input",()=>{
 /*=============================
   PLAY / PAUSE
 ==============================*/
-
 playToggle.addEventListener("click",()=>{
-
-    console.log("BOTON");
 
     if(player.paused){
 
-        console.log("PLAY");
+        if(player.src){
 
-        player.play();
+            player.play();
+
+        }else if(radioActual){
+
+            cargarRadio(radioActual);
+
+        }
 
     }else{
-
-        console.log("PAUSE");
 
         player.pause();
 
