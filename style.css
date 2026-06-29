@@ -23,12 +23,12 @@ body{
 
     background:
     linear-gradient(
-	90deg,
-	#27C8F7,
-	#5B86FF,
-	#8B5CF6,
-	#F24BA8
-	)
+        90deg,
+        #25C8F7 0%,
+        #4B7BFF 45%,
+        #8C52FF 75%,
+        #FF4FA3 100%
+    );
 
     color:white;
 
@@ -642,7 +642,14 @@ audio{
 
     border-radius:50%;
 
-    background:#29C7F6;
+    background:
+linear-gradient(
+135deg,
+#25C8F7,
+#4B7BFF,
+#8C52FF,
+#FF4FA3
+);
 
 }
 
@@ -749,21 +756,19 @@ audio{
 
 #playToggle{
 
-    width:42px;
+    width:64px;
 
-    height:42px;
+    height:64px;
 
     border:none;
 
     border-radius:50%;
 
-    background:#29C7F6;
+    cursor:pointer;
 
     color:white;
 
-    font-size:18px;
-
-    cursor:pointer;
+    font-size:28px;
 
     display:flex;
 
@@ -771,16 +776,32 @@ audio{
 
     justify-content:center;
 
-    box-shadow:
-        0 4px 12px rgba(41,199,246,.30);
+    background:
+    linear-gradient(
+        135deg,
+        #25C8F7,
+        #4B7BFF,
+        #8C52FF,
+        #FF4FA3
+    );
 
-    transition:.25s;
+    box-shadow:
+        0 10px 24px rgba(91,123,255,.18),
+        0 0 18px rgba(236,72,153,.12);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
 
 }
 
 #playToggle:hover{
 
-    transform:scale(1.08);
+    transform:scale(1.06);
+
+    box-shadow:
+        0 12px 28px rgba(91,123,255,.22),
+        0 0 22px rgba(236,72,153,.16);
 
 }
 
