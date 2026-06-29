@@ -418,11 +418,17 @@ volumeSlider.addEventListener("input",()=>{
 
 playToggle.addEventListener("click",()=>{
 
+    console.log("BOTON");
+
     if(player.paused){
+
+        console.log("PLAY");
 
         player.play();
 
     }else{
+
+        console.log("PAUSE");
 
         player.pause();
 
