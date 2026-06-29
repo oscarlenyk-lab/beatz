@@ -86,17 +86,17 @@ body{
     width:100%;
 
     background:
-    linear-gradient(#FFFFFF,#FFFFFF) padding-box,
+        linear-gradient(#FFFFFF,#FFFFFF) padding-box,
 
-    linear-gradient(
-        90deg,
-        #25C8F7,
-        #4B7BFF,
-        #8C52FF,
-        #FF4FA3
-    ) border-box;
+        linear-gradient(
+            90deg,
+            #25C8F7,
+            #4B7BFF,
+            #8C52FF,
+            #FF4FA3
+        ) border-box;
 
-	border:1px solid transparent;
+    border:2px solid transparent;
 
     border-radius:32px;
 
@@ -109,10 +109,11 @@ body{
     gap:18px;
 
     box-shadow:
-0 12px 30px rgba(0,0,0,.08),
-0 0 18px rgba(91,134,255,.10),
-0 0 28px rgba(242,75,168,.08);
-
+    0 12px 30px rgba(0,0,0,.08),
+    0 0 14px rgba(37,200,247,.08),
+    0 0 20px rgba(139,92,246,.06),
+    0 0 24px rgba(255,79,163,.05);
+	
     overflow:hidden;
 
 }
