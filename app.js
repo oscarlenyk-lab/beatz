@@ -339,9 +339,11 @@ if(ultimaRadio){
         
         playToggle.textContent = "▶";
 
-playStatus.textContent = "PAUSED";
+        playStatus.textContent = "PAUSED";
 
-logoGrande.classList.remove("reproduciendo");
+        logoGrande.classList.remove("reproduciendo");
+
+    }
 
 }
 /* Animación del logo */
