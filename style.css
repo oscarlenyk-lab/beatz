@@ -697,3 +697,80 @@ audio{
     transition:.20s ease;
 
 }
+
+/*=========================
+  PLAY CONTROL
+=========================*/
+
+.play-control{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-top:12px;
+
+    margin-bottom:14px;
+
+}
+
+#playToggle{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#29C7F6;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:
+        0 4px 12px rgba(41,199,246,.30);
+
+    transition:.25s;
+
+}
+
+#playToggle:hover{
+
+    transform:scale(1.08);
+
+}
+
+#playToggle:active{
+
+    transform:scale(.94);
+
+}
+
+#playStatus{
+
+    font-size:14px;
+
+    font-weight:700;
+
+    color:#16A34A;
+
+    letter-spacing:.5px;
+
+}
