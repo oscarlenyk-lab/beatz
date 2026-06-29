@@ -120,6 +120,12 @@ document.getElementById("player");
 const volumeSlider =
 document.getElementById("volumeSlider");
 
+const playToggle =
+document.getElementById("playToggle");
+
+const playStatus =
+document.getElementById("playStatus");
+
 function cargarRadio(radio){
 
     logoGrande.src = radio.logo;
@@ -329,27 +335,33 @@ if(ultimaRadio){
 }
 /* Animación del logo */
 
-player.addEventListener("play", () => {
+player.addEventListener("play",()=>{
 
-    logoGrande.classList.add(
-        "reproduciendo"
-    );
+    logoGrande.classList.add("reproduciendo");
 
-});
+    playToggle.textContent="⏸";
 
-player.addEventListener("pause", () => {
-
-    logoGrande.classList.remove(
-        "reproduciendo"
-    );
+    playStatus.textContent="LIVE";
 
 });
 
-player.addEventListener("ended", () => {
+player.addEventListener("pause",()=>{
 
-    logoGrande.classList.remove(
-        "reproduciendo"
-    );
+    logoGrande.classList.remove("reproduciendo");
+
+    playToggle.textContent="▶";
+
+    playStatus.textContent="PAUSED";
+
+});
+
+player.addEventListener("ended",()=>{
+
+    logoGrande.classList.remove("reproduciendo");
+
+    playToggle.textContent="▶";
+
+    playStatus.textContent="PAUSED";
 
 });
 
@@ -397,5 +409,23 @@ volumeSlider.addEventListener("input",()=>{
         "volumen",
         volumen
     );
+
+});
+
+/*=============================
+  PLAY / PAUSE
+==============================*/
+
+playToggle.addEventListener("click",()=>{
+
+    if(player.paused){
+
+        player.play();
+
+    }else{
+
+        player.pause();
+
+    }
 
 });
