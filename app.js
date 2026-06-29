@@ -336,8 +336,13 @@ if(ultimaRadio){
 
         radioDescripcion.textContent =
         radioGuardada.descripcion;
+        
+        playToggle.textContent = "▶";
 
-    }
+playStatus.textContent = "PAUSED";
+
+logoGrande.classList.remove("reproduciendo");
+
 }
 /* Animación del logo */
 
