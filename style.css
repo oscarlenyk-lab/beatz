@@ -599,25 +599,29 @@ audio{
 
 #volumeSlider::-webkit-slider-thumb{
 
+    appearance:none;
     -webkit-appearance:none;
 
-    appearance:none;
-
-    width:22px;
-
-    height:22px;
+    width:16px;
+    height:16px;
 
     border-radius:50%;
 
-    background:#8C52FF;
+    background:
+    linear-gradient(
+        135deg,
+        #25C8F7,
+        #4B7BFF,
+        #8C52FF,
+        #FF4FA3
+    );
 
-    border:3px solid white;
-
-    box-shadow:
-
-        0 0 14px rgba(139,82,255,.25);
+    border:3px solid #FFFFFF;
 
     cursor:pointer;
+
+    box-shadow:
+        0 4px 12px rgba(75,123,255,.20);
 
 }
 
@@ -711,9 +715,9 @@ audio{
 
 #playToggle{
 
-    width:64px;
+    width:72px;
 
-    height:64px;
+    height:72px;
 
     border:none;
 
@@ -723,7 +727,7 @@ audio{
 
     color:white;
 
-    font-size:28px;
+    font-size:32px;
 
     display:flex;
 
