@@ -371,6 +371,10 @@ player.addEventListener("play",()=>{
     playStatus.textContent="LIVE";
     playStatus.style.color="#16A34A";
 
+    document
+    .querySelector(".equalizer")
+    .classList.add("active");
+
 });
 
 player.addEventListener("pause",()=>{
@@ -384,6 +388,10 @@ player.addEventListener("pause",()=>{
     playStatus.textContent="PAUSED";
     playStatus.style.color="#7A7A7A";
 
+    document
+    .querySelector(".equalizer")
+    .classList.remove("active");
+
 });
 
 player.addEventListener("ended",()=>{
@@ -395,6 +403,10 @@ player.addEventListener("ended",()=>{
     `;
 
     playStatus.textContent="PAUSED";
+
+    document
+    .querySelector(".equalizer")
+    .classList.remove("active");
 
 });
 
