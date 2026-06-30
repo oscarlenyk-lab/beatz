@@ -782,3 +782,91 @@ audio{
     letter-spacing:.5px;
 
 }
+
+/*=========================
+  BEATSTREAM EQUALIZER
+=========================*/
+
+.equalizer{
+
+    display:none;
+
+    align-items:flex-end;
+
+    gap:4px;
+
+    height:16px;
+
+    margin-left:10px;
+
+}
+
+.equalizer.active{
+
+    display:flex;
+
+}
+
+.equalizer span{
+
+    width:4px;
+
+    border-radius:999px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #25C8F7 0%,
+            #4B7BFF 35%,
+            #8C52FF 70%,
+            #FF4FA3 100%
+        );
+
+    transform-origin:bottom;
+
+    animation:beatstreamEQ .9s ease-in-out infinite;
+
+    box-shadow:
+        0 0 8px rgba(139,92,246,.20);
+
+}
+
+.equalizer span:nth-child(1){
+
+    height:7px;
+
+    animation-delay:0s;
+
+}
+
+.equalizer span:nth-child(2){
+
+    height:13px;
+
+    animation-delay:.20s;
+
+}
+
+.equalizer span:nth-child(3){
+
+    height:9px;
+
+    animation-delay:.40s;
+
+}
+
+@keyframes beatstreamEQ{
+
+    0%{ transform:scaleY(.35); }
+
+    20%{ transform:scaleY(.95); }
+
+    40%{ transform:scaleY(.55); }
+
+    60%{ transform:scaleY(1); }
+
+    80%{ transform:scaleY(.45); }
+
+    100%{ transform:scaleY(.35); }
+
+}
