@@ -1,7 +1,7 @@
 const radios = [
 
 {
-    nombre:"m2o Radio",
+    nombre:"M2O Radio",
     descripcion:"Italy's Dance Station",
     logo:"logos/m2o.png",
     stream:"https://streamcdnb3-4c4b867c89244861ac216426883d1ad0.msvdn.net/radiom2o/radiom2o/play1.m3u8"
@@ -135,13 +135,23 @@ function cargarRadio(radio){
 
     radioActual = radio;
 
+    logoGrande.style.opacity = "0";
+
+setTimeout(()=>{
+
     logoGrande.src = radio.logo;
 
-    radioNombre.textContent =
-    radio.nombre;
+    radioNombre.textContent = radio.nombre;
 
-    radioDescripcion.textContent =
-    radio.descripcion;
+    radioDescripcion.textContent = radio.descripcion;
+
+    logoGrande.onload = ()=>{
+
+        logoGrande.style.opacity = "1";
+
+    };
+
+},200);
     
     if(Hls.isSupported() &&
        radio.stream.includes(".m3u8")){
