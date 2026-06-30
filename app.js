@@ -1,7 +1,7 @@
 const radios = [
 
 {
-    nombre:"M2O Radio",
+    nombre:"m2o Radio",
     descripcion:"Italy's Dance Station",
     logo:"logos/m2o.png",
     stream:"https://streamcdnb3-4c4b867c89244861ac216426883d1ad0.msvdn.net/radiom2o/radiom2o/play1.m3u8"
@@ -359,6 +359,7 @@ player.addEventListener("play",()=>{
     `;
 
     playStatus.textContent="LIVE";
+    playStatus.style.color="#16A34A";
 
 });
 
@@ -371,6 +372,7 @@ player.addEventListener("pause",()=>{
     `;
 
     playStatus.textContent="PAUSED";
+    playStatus.style.color="#7A7A7A";
 
 });
 
