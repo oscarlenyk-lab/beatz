@@ -152,8 +152,9 @@ body{
         0 12px 28px rgba(0,0,0,.10);
 
     transition:
-        transform .35s ease,
-        box-shadow .35s ease;
+    opacity .25s ease,
+    transform .35s ease,
+    box-shadow .35s ease;
 
     background:white;
 
