@@ -789,15 +789,15 @@ audio{
 
 .equalizer{
 
-    display:none;
+    display:flex;
 
-    align-items:flex-end;
+    align-items:center;
 
-    gap:4px;
+    justify-content:center;
 
-    height:16px;
+    gap:3px;
 
-    margin-left:10px;
+    margin-left:8px;
 
 }
 
@@ -809,7 +809,11 @@ audio{
 
 .equalizer span{
 
+    display:block;
+
     width:4px;
+
+    min-height:6px;
 
     border-radius:999px;
 
