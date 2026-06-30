@@ -123,6 +123,9 @@ document.getElementById("volumeSlider");
 const playToggle =
 document.getElementById("playToggle");
 
+const playIcon =
+document.getElementById("playIcon");
+
 const playStatus =
 document.getElementById("playStatus");
 
@@ -337,8 +340,6 @@ if(ultimaRadio){
         radioDescripcion.textContent =
         radioGuardada.descripcion;
         
-        playToggle.textContent = "▶";
-
         playStatus.textContent = "PAUSED";
 
         logoGrande.classList.remove("reproduciendo");
@@ -352,7 +353,10 @@ player.addEventListener("play",()=>{
 
     logoGrande.classList.add("reproduciendo");
 
-    playToggle.textContent="⏸";
+    playIcon.innerHTML = `
+        <rect x="6" y="5" width="4" height="14" rx="1"></rect>
+        <rect x="14" y="5" width="4" height="14" rx="1"></rect>
+    `;
 
     playStatus.textContent="LIVE";
 
@@ -362,7 +366,9 @@ player.addEventListener("pause",()=>{
 
     logoGrande.classList.remove("reproduciendo");
 
-    playToggle.textContent="▶";
+    playIcon.innerHTML = `
+        <path d="M8 5v14l11-7z"></path>
+    `;
 
     playStatus.textContent="PAUSED";
 
@@ -372,7 +378,9 @@ player.addEventListener("ended",()=>{
 
     logoGrande.classList.remove("reproduciendo");
 
-    playToggle.textContent="▶";
+    playIcon.innerHTML = `
+        <path d="M8 5v14l11-7z"></path>
+    `;
 
     playStatus.textContent="PAUSED";
 
