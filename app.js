@@ -388,8 +388,12 @@ player.addEventListener("play",()=>{
     playStatus.style.color = "#16A34A";
 
     document
-        .querySelector(".equalizer")
-        .classList.remove("paused");
+	.querySelectorAll(".equalizer span")
+	.forEach(bar=>{
+
+    bar.style.animationPlayState="running";
+
+    bar.style.opacity="1";
 
 });
 
@@ -405,9 +409,13 @@ player.addEventListener("pause",()=>{
 
 playStatus.style.color = "#F59E0B";
 
-document
-    .querySelector(".equalizer")
-    .classList.add("paused");
+	document
+	.querySelectorAll(".equalizer span")
+	.forEach(bar=>{
+
+    bar.style.animationPlayState="paused";
+
+    bar.style.opacity=".35";
 
 });
 
@@ -423,9 +431,13 @@ player.addEventListener("ended",()=>{
 
 playStatus.style.color = "#8A8F98";
 
-document
-    .querySelector(".equalizer")
-    .classList.add("paused");
+	document
+	.querySelectorAll(".equalizer span")
+	.forEach(bar=>{
+
+    bar.style.animationPlayState="paused";
+
+    bar.style.opacity=".35";
 
 });
 
