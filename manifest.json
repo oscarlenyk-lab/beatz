@@ -1,10 +1,10 @@
 {
-  "name": "BeatStream",
-  "short_name": "BeatStream",
+  "name": "Beatz",
+  "short_name": "Beatz",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#F8F9FB",
-  "theme_color": "#29C7F6",
+  "theme_color": "#8C52FF",
   "icons": [
     {
       "src": "icons/icon-192.png",
