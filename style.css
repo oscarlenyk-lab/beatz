@@ -830,15 +830,19 @@ audio{
     background:
         linear-gradient(
             180deg,
-            #25C8F7 0%,
-            #4B7BFF 35%,
-            #8C52FF 70%,
-            #FF4FA3 100%
+            #25C8F7,
+            #4B7BFF,
+            #8C52FF,
+            #FF4FA3
         );
 
     transform-origin:bottom;
 
     animation:beatstreamEQ .9s ease-in-out infinite;
+
+    animation-play-state:paused;
+
+    opacity:.35;
 
     box-shadow:
         0 0 8px rgba(139,92,246,.20);
