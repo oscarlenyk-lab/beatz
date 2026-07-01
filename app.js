@@ -1,7 +1,7 @@
 const radios = [
 
 {
-    nombre:"m2o Radio",
+    nombre:"M2O Radio",
     descripcion:"Italy's Dance Station",
     logo:"logos/m2o.png",
     stream:"https://streamcdnb3-4c4b867c89244861ac216426883d1ad0.msvdn.net/radiom2o/radiom2o/play1.m3u8"
@@ -364,9 +364,14 @@ if(ultimaRadio){              // ← Abre IF 1
         .querySelector(".equalizer")
         .classList.add("paused");
 
-    }                         // ← Cierra IF 2
+    console.log(
+    "Estado inicial:",
+    document.querySelector(".equalizer").className
+);
 
-}                             // ← Cierra IF 1
+    }   // ← Cierra if(radioGuardada)
+
+}                              // ← Cierra IF 1
 /* Animación del logo */
 
 player.addEventListener("play",()=>{
@@ -380,15 +385,11 @@ player.addEventListener("play",()=>{
 
     playStatus.textContent = "LIVE";
 
-playStatus.style.color = "#16A34A";
+    playStatus.style.color = "#16A34A";
 
-document
-.querySelector(".equalizer")
-.classList.remove("paused");
-
-document
-    .querySelector(".equalizer")
-    .classList.remove("paused");
+    document
+        .querySelector(".equalizer")
+        .classList.remove("paused");
 
 });
 
