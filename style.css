@@ -38,28 +38,59 @@ body{
 
 }
 
+.header-brand{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:14px;
+
+}
+
+.header-logo{
+
+    width:54px;
+
+    height:54px;
+
+    object-fit:contain;
+
+    filter:
+        drop-shadow(
+            0 6px 12px rgba(0,0,0,.18)
+        );
+
+}
+
 .header h1{
 
     margin:0;
 
-    font-size:28px;
+    font-size:30px;
 
-    font-weight:700;
+    font-weight:800;
+
+    text-align:left;
+
 }
 
 .tagline{
 
-    margin-top:8px;
+    margin-top:4px;
 
     margin-bottom:0;
 
-    font-size:14px;
+    font-size:13px;
 
-    font-weight:500;
+    text-align:left;
 
-    color:rgba(255,255,255,.9);
+    color:rgba(255,255,255,.90);
 
     letter-spacing:1px;
+
 }
 
 .player-section{
