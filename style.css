@@ -801,9 +801,17 @@ audio{
 
 }
 
-.equalizer.active{
+.equalizer{
 
     display:flex;
+
+}
+
+.equalizer.paused span{
+
+    animation-play-state:paused;
+
+    opacity:.35;
 
 }
 
