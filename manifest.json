@@ -1,6 +1,6 @@
 {
-  "name": "Beatz",
-"short_name": "Beatz",
+  "name": "BeatStream",
+  "short_name": "BeatStream",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#F8F9FB",
