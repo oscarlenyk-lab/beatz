@@ -1,7 +1,7 @@
 const radios = [
 
 {
-    nombre:"M2O Radio",
+    nombre:"m2o Radio",
     descripcion:"Italy's Dance Station",
     logo:"logos/m2o.png",
     stream:"https://streamcdnb3-4c4b867c89244861ac216426883d1ad0.msvdn.net/radiom2o/radiom2o/play1.m3u8"
@@ -330,14 +330,14 @@ shows.forEach(show => {
 const ultimaRadio =
 localStorage.getItem("ultimaRadio");
 
-if(ultimaRadio){
+if(ultimaRadio){              // ← Abre IF 1
 
     const radioGuardada =
     radios.find(r =>
         r.nombre === ultimaRadio
     );
 
-    if(radioGuardada){
+    if(radioGuardada){        // ← Abre IF 2
 
         radioActual = radioGuardada;
 
@@ -349,14 +349,24 @@ if(ultimaRadio){
 
         radioDescripcion.textContent =
         radioGuardada.descripcion;
-        
-        playStatus.textContent = "PAUSED";
+
+        playIcon.innerHTML = `
+            <path d="M8 5v14l11-7z"></path>
+        `;
+
+        playStatus.textContent = "STOPPED";
+
+        playStatus.style.color = "#8A8F98";
 
         logoGrande.classList.remove("reproduciendo");
 
-    }
+        document
+        .querySelector(".equalizer")
+        .classList.add("paused");
 
-}
+    }                         // ← Cierra IF 2
+
+}                             // ← Cierra IF 1
 /* Animación del logo */
 
 player.addEventListener("play",()=>{
@@ -368,12 +378,17 @@ player.addEventListener("play",()=>{
         <rect x="14" y="5" width="4" height="14" rx="1"></rect>
     `;
 
-    playStatus.textContent="LIVE";
-    playStatus.style.color="#16A34A";
+    playStatus.textContent = "LIVE";
 
-    document
+playStatus.style.color = "#16A34A";
+
+document
+.querySelector(".equalizer")
+.classList.remove("paused");
+
+document
     .querySelector(".equalizer")
-    .classList.add("active");
+    .classList.remove("paused");
 
 });
 
@@ -385,12 +400,13 @@ player.addEventListener("pause",()=>{
         <path d="M8 5v14l11-7z"></path>
     `;
 
-    playStatus.textContent="PAUSED";
-    playStatus.style.color="#7A7A7A";
+    playStatus.textContent = "PAUSED";
 
-    document
+playStatus.style.color = "#F59E0B";
+
+document
     .querySelector(".equalizer")
-    .classList.remove("active");
+    .classList.add("paused");
 
 });
 
@@ -402,11 +418,13 @@ player.addEventListener("ended",()=>{
         <path d="M8 5v14l11-7z"></path>
     `;
 
-    playStatus.textContent="PAUSED";
+    playStatus.textContent = "STOPPED";
 
-    document
+playStatus.style.color = "#8A8F98";
+
+document
     .querySelector(".equalizer")
-    .classList.remove("active");
+    .classList.add("paused");
 
 });
 
