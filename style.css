@@ -30,38 +30,9 @@ body{
         #FF4FA3 100%
     );
 
-    color:white;
+    padding:26px 20px;
 
     text-align:center;
-
-    padding:18px 18px 20px;
-
-}
-
-.header-brand{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:14px;
-
-}
-
-.header-logo{
-
-    width:54px;
-
-    height:54px;
-
-    object-fit:contain;
-
-    filter:
-        drop-shadow(
-            0 6px 12px rgba(0,0,0,.18)
-        );
 
 }
 
@@ -69,23 +40,25 @@ body{
 
     margin:0;
 
-    font-size:30px;
+    font-size:28px;
 
-    font-weight:800;
+    font-weight:700;
 
-    text-align:left;
+    text-align:center;
 
 }
 
 .tagline{
 
-    margin-top:4px;
+    margin-top:8px;
 
     margin-bottom:0;
 
-    font-size:13px;
+    font-size:14px;
 
-    text-align:left;
+    font-weight:500;
+
+    text-align:center;
 
     color:rgba(255,255,255,.90);
 
