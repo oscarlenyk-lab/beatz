@@ -301,29 +301,19 @@ audio{
 
 }
 
-.radio{
+.radio p{
 
-    height:72px;
+    margin-left:14px;
 
-    background:#FFFFFF;
+    font-size:20px;
 
-    border-radius:16px;
+    font-weight:700;
 
-    display:flex;
+    color:#222;
 
-    align-items:center;
+    line-height:1.2;
 
-    justify-content:flex-start;
-
-    padding:10px;
-
-    cursor:pointer;
-
-    transition:all .25s ease;
-
-    box-shadow:
-
-        0 6px 14px rgba(0,0,0,.08);
+    flex:1;
 
 }
 
@@ -400,6 +390,8 @@ audio{
 
     padding:14px;
 
+    min-height:145px;
+
     display:flex;
 
     flex-direction:column;
@@ -408,9 +400,7 @@ audio{
 
     align-items:center;
 
-    gap:10px;
-
-    min-height:140px;
+    gap:12px;
 
     box-shadow:
         0 8px 20px rgba(0,0,0,.08);
@@ -763,11 +753,24 @@ audio{
 
 }
 
-.radio:hover .youtube-badge{
+.show-card:hover .youtube-badge{
 
     transform:scale(1.05);
 
     transition:.20s ease;
+
+}
+
+.show-card .youtube-badge{
+
+    margin-top:6px;
+
+}
+
+.show-card p,
+.show-card small{
+
+    display:none;
 
 }
 
