@@ -521,31 +521,41 @@ function crearTarjetaShow(show){
 
     const card = document.createElement("div");
 
-    card.className = "radio";
+    card.className = "show-card";
 
     card.innerHTML = `
 
-    <img src="${show.logo}" alt="${show.nombre}">
+        <img src="${show.logo}" alt="${show.nombre}">
 
-    <div class="show-right">
+        <div class="show-right">
 
-        <div class="youtube-badge">
+            <div class="youtube-badge">
 
-            <img src="logos/youtube.png">
+                <img src="logos/youtube.png">
 
-            <span>YouTube</span>
+                <span>YouTube</span>
+
+            </div>
+
+            <div class="show-time">
+
+                ${show.horario}
+
+            </div>
 
         </div>
 
-        <div class="show-time">
+    `;
 
-            ${show.horario}
+    card.addEventListener("click",()=>{
 
-        </div>
+        window.open(show.youtube,"_blank");
 
-    </div>
+    });
 
-`;
+    UI.shows.appendChild(card);
+
+}
 
 
 /*=========================================================
