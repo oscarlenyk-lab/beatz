@@ -285,19 +285,13 @@ audio{
 
 .radios-grid{
 
-    display:flex;
+    display:grid;
 
-    gap:14px;
+    grid-template-columns:repeat(2,1fr);
 
-    overflow-x:auto;
+    gap:16px;
 
-    overflow-y:hidden;
-
-    padding:8px 14px 20px;
-
-    scroll-snap-type:x proximity;
-
-    scrollbar-width:none;
+    margin-top:25px;
 
 }
 
@@ -309,34 +303,31 @@ audio{
 
 .radio{
 
-    flex:0 0 120px;
-
-    width:120px;
-
-    min-height:135px;
-
     background:white;
 
-    border:3px solid transparent;
+    border-radius:24px;
 
-    border-radius:16px;
-
-    padding:12px;
-
-    overflow:hidden;
+    padding:18px 12px;
 
     text-align:center;
 
     cursor:pointer;
 
-    transition:
-    transform .25s ease,
-    box-shadow .30s ease,
-    border .30s ease,
-    background .30s ease;
+    transition:.25s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:170px;
 
     box-shadow:
-        0 3px 10px rgba(0,0,0,.08);
+
+        0 8px 20px rgba(0,0,0,.08);
 
 }
 
@@ -351,53 +342,49 @@ audio{
 
 .radio img{
 
-    width:68px;
+    width:78px;
 
-    height:68px;
+    height:78px;
 
     object-fit:contain;
 
-    display:block;
-
-    margin:auto;
+    margin-bottom:14px;
 
 }
 
 .radio p{
 
-    margin-top:8px;
+    font-size:1.05rem;
 
-    margin-bottom:0;
+    font-weight:700;
 
-    font-size:16px;
+    line-height:1.3;
 
-    font-weight:600;
-
-    line-height:1.25;
+    color:#222;
 
 }
 
 .radio.activa{
 
-    border:2px solid transparent;
+    border:3px solid transparent;
 
     background:
-        linear-gradient(#FFFFFF,#FFFFFF) padding-box,
+
+        linear-gradient(#fff,#fff) padding-box,
 
         linear-gradient(
-            90deg,
-            #25C8F7,
-            #4B7BFF,
-            #8C52FF,
-            #FF4FA3
+
+            135deg,
+
+            #28C7F7,
+
+            #5C63FF,
+
+            #FF3CA2
+
         ) border-box;
 
-    box-shadow:
-        0 8px 18px rgba(0,0,0,.08),
-        0 0 12px rgba(75,123,255,.15),
-        0 0 20px rgba(236,72,153,.10);
-
-    transform:translateY(-2px);
+    transform:translateY(-4px);
 
 }
 
