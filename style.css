@@ -283,40 +283,21 @@ audio{
     display:block;
 }
 
-.radio{
+.radios-grid{
 
     display:flex;
 
-    align-items:center;
-
     gap:14px;
 
-    padding:10px;
+    overflow-x:auto;
 
-    background:#fff;
+    overflow-y:hidden;
 
-    border-radius:18px;
+    padding:8px 14px 20px;
 
-    height:72px;
+    scroll-snap-type:x proximity;
 
-    box-shadow:
-        0 8px 20px rgba(0,0,0,.08);
-
-    cursor:pointer;
-
-    transition:.25s;
-
-}
-
-.radios-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:12px;
-
-    margin-top:18px;
+    scrollbar-width:none;
 
 }
 
@@ -326,27 +307,36 @@ audio{
 
 }
 
-.radio p{
+.radio{
 
-    margin-left:14px;
+    flex:0 0 120px;
 
-    flex:1;
+    width:120px;
 
-    font-size:1.05rem;
+    min-height:135px;
 
-    font-weight:700;
+    background:white;
 
-    color:#222;
+    border:3px solid transparent;
 
-    line-height:1.2;
+    border-radius:16px;
+
+    padding:12px;
 
     overflow:hidden;
 
-    display:-webkit-box;
+    text-align:center;
 
-    -webkit-line-clamp:2;
+    cursor:pointer;
 
-    -webkit-box-orient:vertical;
+    transition:
+    transform .25s ease,
+    box-shadow .30s ease,
+    border .30s ease,
+    background .30s ease;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.08);
 
 }
 
@@ -361,86 +351,53 @@ audio{
 
 .radio img{
 
-    width:56px;
+    width:68px;
 
-    height:56px;
+    height:68px;
 
     object-fit:contain;
 
-    border-radius:10px;
+    display:block;
 
-    margin:0;
+    margin:auto;
 
 }
 
+.radio p{
+
+    margin-top:8px;
+
+    margin-bottom:0;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    line-height:1.25;
+
+}
 
 .radio.activa{
 
     border:2px solid transparent;
 
     background:
-
-        linear-gradient(#fff,#fff) padding-box,
+        linear-gradient(#FFFFFF,#FFFFFF) padding-box,
 
         linear-gradient(
-            135deg,
-            #29C7F6,
-            #6B5CFF,
-            #FF3CA2
+            90deg,
+            #25C8F7,
+            #4B7BFF,
+            #8C52FF,
+            #FF4FA3
         ) border-box;
 
-    transform:scale(1.02);
-
-}
-
-/*=========================================================
-  FEATURED SHOWS
-=========================================================*/
-
-.show-card{
-
-    background:#FFFFFF;
-
-    border-radius:18px;
-
-    padding:14px;
-
-    min-height:145px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:12px;
-
     box-shadow:
-        0 8px 20px rgba(0,0,0,.08);
+        0 8px 18px rgba(0,0,0,.08),
+        0 0 12px rgba(75,123,255,.15),
+        0 0 20px rgba(236,72,153,.10);
 
-    cursor:pointer;
-
-    transition:.25s;
-
-}
-
-.show-card img:first-child{
-
-    width:84px;
-
-    height:84px;
-
-    object-fit:contain;
-
-    border-radius:12px;
-
-}
-
-.show-card .youtube-badge{
-
-    margin-top:6px;
+    transform:translateY(-2px);
 
 }
 
@@ -768,24 +725,11 @@ audio{
 
 }
 
-.show-card:hover .youtube-badge{
+.radio:hover .youtube-badge{
 
     transform:scale(1.05);
 
     transition:.20s ease;
-
-}
-
-.show-card .youtube-badge{
-
-    margin-top:6px;
-
-}
-
-.show-card p,
-.show-card small{
-
-    display:none;
 
 }
 
