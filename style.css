@@ -285,19 +285,13 @@ audio{
 
 .radios-grid{
 
-    display:flex;
+    display:grid;
 
-    gap:14px;
+    grid-template-columns:repeat(2,1fr);
 
-    overflow-x:auto;
+    gap:10px;
 
-    overflow-y:hidden;
-
-    padding:8px 14px 20px;
-
-    scroll-snap-type:x proximity;
-
-    scrollbar-width:none;
+    margin-top:16px;
 
 }
 
@@ -309,34 +303,26 @@ audio{
 
 .radio{
 
-    flex:0 0 120px;
+    display:flex;
 
-    width:120px;
+    align-items:center;
 
-    min-height:135px;
+    gap:12px;
 
-    background:white;
-
-    border:3px solid transparent;
+    background:#FFFFFF;
 
     border-radius:16px;
 
     padding:12px;
 
-    overflow:hidden;
+    height:78px;
 
-    text-align:center;
+    box-shadow:
+        0 6px 16px rgba(0,0,0,.08);
 
     cursor:pointer;
 
-    transition:
-    transform .25s ease,
-    box-shadow .30s ease,
-    border .30s ease,
-    background .30s ease;
-
-    box-shadow:
-        0 3px 10px rgba(0,0,0,.08);
+    transition:.25s;
 
 }
 
@@ -351,29 +337,28 @@ audio{
 
 .radio img{
 
-    width:68px;
+    width:42px;
 
-    height:68px;
+    height:42px;
 
     object-fit:contain;
 
-    display:block;
-
-    margin:auto;
+    flex-shrink:0;
 
 }
-
 .radio p{
 
-    margin-top:8px;
+    margin:0;
 
-    margin-bottom:0;
+    flex:1;
 
     font-size:16px;
 
-    font-weight:600;
+    font-weight:700;
 
-    line-height:1.25;
+    color:#222;
+
+    line-height:1.2;
 
 }
 
