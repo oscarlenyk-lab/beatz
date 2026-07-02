@@ -524,9 +524,10 @@ function crearTarjetaShow(show){
     card.className = "radio";
 
     card.innerHTML = `
-        <img src="${show.logo}" alt="${show.nombre}">
 
-        <p>${show.nombre}</p>
+    <img src="${show.logo}" alt="${show.nombre}">
+
+    <div class="show-right">
 
         <div class="youtube-badge">
 
@@ -536,29 +537,15 @@ function crearTarjetaShow(show){
 
         </div>
 
-        <small>
+        <div class="show-time">
 
             ${show.horario}
 
-        </small>
+        </div>
 
-    `;
+    </div>
 
-    card.addEventListener("click",()=>{
-
-        window.open(
-
-            show.youtube,
-
-            "_blank"
-
-        );
-
-    });
-
-    UI.shows.appendChild(card);
-
-}
+`;
 
 
 /*=========================================================
