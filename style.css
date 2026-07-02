@@ -59,6 +59,8 @@ body{
 
     gap:12px;
 
+    margin-bottom:6px;
+
 }
 
 .brand-logo{
@@ -74,8 +76,8 @@ body{
     object-fit:contain;
 
     filter:
-        drop-shadow(0 0 4px rgba(37,200,247,.35))
-        drop-shadow(0 0 8px rgba(140,82,255,.20));
+    drop-shadow(0 0 5px rgba(37,200,247,.45))
+    drop-shadow(0 0 10px rgba(140,82,255,.28));
 
     transition:
         transform .25s ease,
