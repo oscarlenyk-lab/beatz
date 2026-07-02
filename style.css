@@ -303,7 +303,7 @@ audio{
 
 .radio{
 
-    height:82px;
+    height:72px;
 
     background:#FFFFFF;
 
@@ -338,9 +338,9 @@ audio{
 
 .radio img{
 
-    width:62px;
+    width:56px;
 
-    height:62px;
+    height:56px;
 
     object-fit:contain;
 
