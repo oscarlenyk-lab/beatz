@@ -520,15 +520,19 @@ function crearTarjetaShow(show){
     card.className = "show-card";
 
     card.innerHTML = `
-    <img src="${show.logo}">
-
-    <div class="youtube-badge">
-
-        <img src="logos/youtube.png">
-
-        <span>YouTube</span>
-
+    <div style="
+        width:100%;
+        height:100%;
+        background:red;
+        color:white;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-weight:bold;
+    ">
+        PRUEBA
     </div>
+`;
 `;
 
     card.addEventListener("click",()=>{
