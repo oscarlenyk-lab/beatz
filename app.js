@@ -414,32 +414,18 @@ player.addEventListener("pause",()=>{
 
     playStatus.textContent = "PAUSED";
 
-playStatus.style.color = "#F59E0B";
+    playStatus.style.color = "#F59E0B";
 
-    player.addEventListener("play",()=>{
-
-    logoGrande.classList.add("reproduciendo");
-
-    playIcon.innerHTML = `
-        <rect x="6" y="5" width="4" height="14" rx="1"></rect>
-        <rect x="14" y="5" width="4" height="14" rx="1"></rect>
-    `;
-
-    playStatus.textContent = "LIVE";
-
-    playStatus.style.color = "#16A34A";
-
-    liveDot.style.background = "#22C55E";
+    liveDot.style.background = "#F59E0B";
 
     liveDot.style.boxShadow =
-    "0 0 8px rgba(34,197,94,.55)";
+    "0 0 8px rgba(245,158,11,.55)";
 
-    liveDot.style.animation =
-    "livePulse 1.8s infinite";
+    liveDot.style.animation = "none";
 
     document
         .querySelector(".equalizer")
-        .classList.remove("paused");
+        .classList.add("paused");
 
 });
 
