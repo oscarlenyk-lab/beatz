@@ -474,9 +474,8 @@ function crearTarjetaRadio(radio){
     card.className = "radio";
 
     card.innerHTML = `
-        <img src="${radio.logo}" alt="${radio.nombre}">
-        <p>${radio.nombre}</p>
-    `;
+    <img src="${radio.logo}">
+	`;
 
     card.addEventListener("click",()=>{
 
