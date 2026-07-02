@@ -1,198 +1,418 @@
+/****************************************************************
+ *
+ *  BEATZ v1.0
+ *  Electronic Music Worldwide
+ *
+ ****************************************************************/
+
+
+/*=========================================================
+  CONFIGURACIÓN
+=========================================================*/
+
+const CONFIG = {
+
+    volumenInicial: 0.70,
+
+    estadoInicial: "STOPPED",
+
+    fadeLogo: 200,
+
+    colores: {
+
+        live: "#22C55E",
+
+        paused: "#F59E0B",
+
+        stopped: "#9CA3AF"
+
+    }
+
+};
+
+
+/*=========================================================
+  ESTADO DE LA APLICACIÓN
+=========================================================*/
+
+const App = {
+
+    radioActual: null,
+
+    hls: null,
+
+    tvHls: null,
+
+    estado: CONFIG.estadoInicial
+
+};
+
+
+/*=========================================================
+  DATOS
+=========================================================*/
+
 const radios = [
 
-{
-    nombre:"m2o Radio",
-    descripcion:"Italy's Dance Station",
-    logo:"logos/m2o.png",
-    stream:"https://streamcdnb3-4c4b867c89244861ac216426883d1ad0.msvdn.net/radiom2o/radiom2o/play1.m3u8"
-},
+    {
+        nombre:"m2o Radio",
+        descripcion:"Italy's Dance Station",
+        logo:"logos/m2o.png",
+        stream:"https://streamcdnb3-4c4b867c89244861ac216426883d1ad0.msvdn.net/radiom2o/radiom2o/play1.m3u8"
+    },
 
-{
-    nombre:"Radio Deejay",
-    descripcion:"One Nation, One Station",
-    logo:"logos/deejay.png",
-    stream:"https://streamcdnc1-4c4b867c89244861ac216426883d1ad0.msvdn.net/radiodeejay/radiodeejay/master_ma.m3u8"
-},
+    {
+        nombre:"Radio Deejay",
+        descripcion:"One Nation, One Station",
+        logo:"logos/deejay.png",
+        stream:"https://streamcdnc1-4c4b867c89244861ac216426883d1ad0.msvdn.net/radiodeejay/radiodeejay/master_ma.m3u8"
+    },
 
-{
-    nombre:"One World Radio",
-    descripcion:"The Sound of Tomorrowland",
-    logo:"logos/oneworld.jpg",
-    stream:"https://playerservices.streamtheworld.com/api/livestream-redirect/OWR_INTERNATIONAL_ADP.m3u8"
-},
+    {
+        nombre:"One World Radio",
+        descripcion:"The Sound of Tomorrowland",
+        logo:"logos/oneworld.jpg",
+        stream:"https://playerservices.streamtheworld.com/api/livestream-redirect/OWR_INTERNATIONAL_ADP.m3u8"
+    },
 
-{
-    nombre:"Ibiza Global Radio",
-    descripcion:"The Sound of Ibiza",
-    logo:"logos/ibiza.png",
-    stream:"https://cdn-peer022.streaming-pro.com:8024/ibizaglobalradio.mp3"
-}
+    {
+        nombre:"Ibiza Global Radio",
+        descripcion:"The Sound of Ibiza",
+        logo:"logos/ibiza.png",
+        stream:"https://cdn-peer022.streaming-pro.com:8024/ibizaglobalradio.mp3"
+    }
 
 ];
 
 const tvs = [
 
-{
-    nombre:"m2o TV",
-    logo:"logos/m2o.png",
-    stream:"https://streamcdnc2-4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S62628868/uhdWBlkC1AoO/playlist.m3u8"
-},
-
-{
-    nombre:"Deejay TV",
-    logo:"logos/deejay.png",
-    stream:"https://streamcdnc1-4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S85984808/sMO0tz9Sr2Rk/playlist.m3u8"
-},
+    {
+        nombre:"m2o TV",
+        logo:"logos/m2o.png",
+        stream:"https://streamcdnc2-4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S62628868/uhdWBlkC1AoO/playlist.m3u8"
+    },
 
     {
-    nombre:"Power Dance TV",
-    logo:"logos/powerdance.png",
-    stream:"https://livetv.powerapp.com.tr/dance/dance.smil/playlist.m3u8"
-},
+        nombre:"Deejay TV",
+        logo:"logos/deejay.png",
+        stream:"https://streamcdnc1-4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S85984808/sMO0tz9Sr2Rk/playlist.m3u8"
+    },
 
-{
-    nombre:"Number 1 Dance",
-    logo:"logos/number1dance.png",
-    stream:"https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8"
-}
+    {
+        nombre:"Power Dance TV",
+        logo:"logos/powerdance.png",
+        stream:"https://livetv.powerapp.com.tr/dance/dance.smil/playlist.m3u8"
+    },
+
+    {
+        nombre:"Number 1 Dance",
+        logo:"logos/number1dance.png",
+        stream:"https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8"
+    }
 
 ];
 
 const shows = [
 
-{
-nombre:"A State of Trance",
-logo:"logos/asot.png",
-horario:"Jueves • 12:00 PM",
-youtube:"https://www.youtube.com/@astateoftrance"
-},
+    {
+        nombre:"A State of Trance",
+        logo:"logos/asot.png",
+        horario:"Jueves • 12:00 PM",
+        youtube:"https://www.youtube.com/@astateoftrance"
+    },
 
-{
-nombre:"Group Therapy",
-logo:"logos/grouptherapy.png",
-horario:"Viernes • 1:00 PM",
-youtube:"https://www.youtube.com/@anjunabeats"
-},
+    {
+        nombre:"Group Therapy",
+        logo:"logos/grouptherapy.png",
+        horario:"Viernes • 1:00 PM",
+        youtube:"https://www.youtube.com/@anjunabeats"
+    },
 
-{
-nombre:"Future Sound of Egypt",
-logo:"logos/fsoe.png",
-horario:"Miércoles • 1:00 PM",
-youtube:"https://www.youtube.com/@FutureSoundOfEgypt"
-},
+    {
+        nombre:"Future Sound of Egypt",
+        logo:"logos/fsoe.png",
+        horario:"Miércoles • 1:00 PM",
+        youtube:"https://www.youtube.com/@FutureSoundOfEgypt"
+    },
 
-{
-nombre:"Corsten's Countdown",
-logo:"logos/corsten.png",
-horario:"Miércoles • 12:00 PM",
-youtube:"https://www.youtube.com/@ferrycorsten"
-}
+    {
+        nombre:"Corsten's Countdown",
+        logo:"logos/corsten.png",
+        horario:"Miércoles • 12:00 PM",
+        youtube:"https://www.youtube.com/@ferrycorsten"
+    }
 
 ];
 
-const radiosGrid =
-document.getElementById("radios");
 
-const tvsGrid =
-document.getElementById("tvs");
+/*=========================================================
+  ELEMENTOS DEL DOM
+=========================================================*/
 
-const showsGrid =
-document.getElementById("shows");
+const UI = {
 
-console.log("TVS GRID:", tvsGrid);
-console.log("TVS:", tvs);
+    player: document.getElementById("player"),
 
-const tvPlayer =
-document.getElementById("tvPlayer");
+    tvPlayer: document.getElementById("tvPlayer"),
 
-const logoGrande =
-document.getElementById("logoGrande");
+    logo: document.getElementById("logoGrande"),
 
-const radioNombre =
-document.getElementById("radioNombre");
+    nombre: document.getElementById("radioNombre"),
 
-const radioDescripcion =
-document.getElementById("radioDescripcion");
+    descripcion: document.getElementById("radioDescripcion"),
 
-const player =
-document.getElementById("player");
+    playButton: document.getElementById("playToggle"),
 
-const volumeSlider =
-document.getElementById("volumeSlider");
+    playIcon: document.getElementById("playIcon"),
 
-const playToggle =
-document.getElementById("playToggle");
+    playStatus: document.getElementById("playStatus"),
 
-const playIcon =
-document.getElementById("playIcon");
+    liveDot: document.querySelector(".live-dot"),
 
-const playStatus =
-document.getElementById("playStatus");
+    equalizer: document.querySelector(".equalizer"),
 
-const liveDot =
-document.querySelector(".live-dot");
+    volume: document.getElementById("volumeSlider"),
 
-let radioActual = null;
+    radios: document.getElementById("radios"),
+
+    tvs: document.getElementById("tvs"),
+
+    shows: document.getElementById("shows")
+
+};
+
+
+
+
+/*=========================================================
+  UTILIDADES
+=========================================================*/
+
+function cambiarLogo(src){
+
+    UI.logo.style.opacity = "0";
+
+    setTimeout(()=>{
+
+        UI.logo.src = src;
+
+        UI.logo.onload = ()=>{
+
+            UI.logo.style.opacity = "1";
+
+        };
+
+    }, CONFIG.fadeLogo);
+
+}
+
+
+function cambiarInformacion(nombre, descripcion){
+
+    UI.nombre.textContent = nombre;
+
+    UI.descripcion.textContent = descripcion;
+
+}
+
+
+function guardarUltimaRadio(nombre){
+
+    localStorage.setItem(
+        "ultimaRadio",
+        nombre
+    );
+
+}
+
+
+/*=========================================================
+  ESTADO DEL REPRODUCTOR
+=========================================================*/
+
+function actualizarEstado(estado){
+
+    App.estado = estado;
+
+    switch(estado){
+
+        case "LIVE":
+
+            UI.playStatus.textContent = "LIVE";
+
+            UI.playStatus.style.color =
+            CONFIG.colores.live;
+
+            UI.liveDot.style.background =
+            CONFIG.colores.live;
+
+            UI.liveDot.style.boxShadow =
+            "0 0 8px rgba(34,197,94,.55)";
+
+            UI.liveDot.style.animation =
+            "livePulse 1.8s infinite";
+
+            UI.equalizer.classList.remove("paused");
+
+            UI.logo.classList.add("reproduciendo");
+
+            UI.playIcon.innerHTML = `
+                <rect x="6" y="5" width="4" height="14" rx="1"></rect>
+                <rect x="14" y="5" width="4" height="14" rx="1"></rect>
+            `;
+
+        break;
+
+
+
+        case "PAUSED":
+
+            UI.playStatus.textContent = "PAUSED";
+
+            UI.playStatus.style.color =
+            CONFIG.colores.paused;
+
+            UI.liveDot.style.background =
+            CONFIG.colores.paused;
+
+            UI.liveDot.style.boxShadow =
+            "0 0 8px rgba(245,158,11,.55)";
+
+            UI.liveDot.style.animation =
+            "none";
+
+            UI.equalizer.classList.add("paused");
+
+            UI.logo.classList.remove("reproduciendo");
+
+            UI.playIcon.innerHTML = `
+                <path d="M8 5v14l11-7z"></path>
+            `;
+
+        break;
+
+
+
+        case "STOPPED":
+
+            UI.playStatus.textContent = "STOPPED";
+
+            UI.playStatus.style.color =
+            CONFIG.colores.stopped;
+
+            UI.liveDot.style.background =
+            CONFIG.colores.stopped;
+
+            UI.liveDot.style.boxShadow =
+            "0 0 8px rgba(156,163,175,.45)";
+
+            UI.liveDot.style.animation =
+            "none";
+
+            UI.equalizer.classList.add("paused");
+
+            UI.logo.classList.remove("reproduciendo");
+
+            UI.playIcon.innerHTML = `
+                <path d="M8 5v14l11-7z"></path>
+            `;
+
+        break;
+
+    }
+
+}
+
+
+
+
+/*=========================================================
+  REPRODUCTOR
+=========================================================*/
+
+function detenerHLS(){
+
+    if(App.hls){
+
+        App.hls.destroy();
+
+        App.hls = null;
+
+    }
+
+}
+
+function detenerTV(){
+
+    if(App.tvHls){
+
+        App.tvHls.destroy();
+
+        App.tvHls = null;
+
+    }
+
+    UI.tvPlayer.pause();
+
+    UI.tvPlayer.style.display = "none";
+
+}
 
 function cargarRadio(radio){
 
-    radioActual = radio;
+    App.radioActual = radio;
 
-    logoGrande.style.opacity = "0";
+    detenerTV();
 
-setTimeout(()=>{
+    cambiarLogo(radio.logo);
 
-    logoGrande.src = radio.logo;
+    cambiarInformacion(
 
-    radioNombre.textContent = radio.nombre;
+        radio.nombre,
 
-    radioDescripcion.textContent = radio.descripcion;
+        radio.descripcion
 
-    logoGrande.onload = ()=>{
+    );
 
-        logoGrande.style.opacity = "1";
+    if(radio.stream.includes(".m3u8") &&
+       Hls.isSupported()){
 
-    };
+        detenerHLS();
 
-},200);
-    
-    if(Hls.isSupported() &&
-       radio.stream.includes(".m3u8")){
+        App.hls = new Hls();
 
-        if(window.hls){
-            window.hls.destroy();
-        }
-
-        window.hls = new Hls();
-
-        window.hls.loadSource(
+        App.hls.loadSource(
             radio.stream
         );
 
-        window.hls.attachMedia(
-            player
+        App.hls.attachMedia(
+            UI.player
         );
 
-        window.hls.on(
-            Hls.Events.MANIFEST_PARSED,
-            function(){
+        App.hls.on(
 
-                player.play();
+            Hls.Events.MANIFEST_PARSED,
+
+            ()=>{
+
+                UI.player.play();
 
             }
+
         );
 
     }else{
 
-        player.src =
+        detenerHLS();
+
+        UI.player.src =
         radio.stream;
 
-        player.play();
+        UI.player.play();
 
     }
 
-    localStorage.setItem(
-        "ultimaRadio",
+    guardarUltimaRadio(
         radio.nombre
     );
 
@@ -200,64 +420,71 @@ setTimeout(()=>{
 
 function cargarTV(tv){
 
-    logoGrande.classList.remove("reproduciendo");
+    detenerHLS();
 
-    logoGrande.src = tv.logo;
+    UI.player.pause();
 
-    radioNombre.textContent =
-    tv.nombre;
+    cambiarLogo(tv.logo);
 
-    player.pause();
+    cambiarInformacion(
 
-    tvPlayer.style.display =
+        tv.nombre,
+
+        "Live Music Television"
+
+    );
+
+    UI.tvPlayer.style.display =
     "block";
 
     if(Hls.isSupported()){
 
-        if(window.tvHls){
-            window.tvHls.destroy();
-        }
+        detenerTV();
 
-        window.tvHls =
-        new Hls();
+        App.tvHls = new Hls();
 
-        window.tvHls.loadSource(
+        App.tvHls.loadSource(
             tv.stream
         );
 
-        window.tvHls.attachMedia(
-            tvPlayer
+        App.tvHls.attachMedia(
+            UI.tvPlayer
         );
 
     }else{
 
-        tvPlayer.src =
+        UI.tvPlayer.src =
         tv.stream;
 
     }
 
-    tvPlayer.play();
+    UI.tvPlayer.play();
 
 }
-radios.forEach(radio => {
 
-    const card =
-    document.createElement("div");
+
+
+
+/*=========================================================
+  CONSTRUCCIÓN DE LA INTERFAZ
+=========================================================*/
+
+function crearTarjetaRadio(radio){
+
+    const card = document.createElement("div");
 
     card.className = "radio";
 
     card.innerHTML = `
-        <img src="${radio.logo}">
+        <img src="${radio.logo}" alt="${radio.nombre}">
         <p>${radio.nombre}</p>
     `;
 
     card.addEventListener("click",()=>{
 
         document
-        .querySelectorAll(".radio")
-        .forEach(el =>
-            el.classList.remove("activa")
-        );
+            .querySelectorAll(".radio")
+            .forEach(item=>item.classList.remove("activa"));
 
         card.classList.add("activa");
 
@@ -265,19 +492,19 @@ radios.forEach(radio => {
 
     });
 
-    radiosGrid.appendChild(card);
+    UI.radios.appendChild(card);
 
-});
+}
 
-tvs.forEach(tv => {
 
-    const card =
-    document.createElement("div");
+function crearTarjetaTV(tv){
+
+    const card = document.createElement("div");
 
     card.className = "radio";
 
     card.innerHTML = `
-        <img src="${tv.logo}">
+        <img src="${tv.logo}" alt="${tv.nombre}">
         <p>${tv.nombre}</p>
     `;
 
@@ -287,267 +514,210 @@ tvs.forEach(tv => {
 
     });
 
-    tvsGrid.appendChild(card);
+    UI.tvs.appendChild(card);
 
-});
+}
 
-shows.forEach(show => {
 
-    const card =
-    document.createElement("div");
+function crearTarjetaShow(show){
+
+    const card = document.createElement("div");
 
     card.className = "radio";
 
     card.innerHTML = `
-    <img src="${show.logo}">
-    <p>${show.nombre}</p>
+        <img src="${show.logo}" alt="${show.nombre}">
 
-    <div class="youtube-badge">
+        <p>${show.nombre}</p>
 
-        <img src="logos/youtube.png">
+        <div class="youtube-badge">
 
-        <span>YouTube</span>
+            <img src="logos/youtube.png">
 
-    </div>
+            <span>YouTube</span>
 
-    <small class="show-time">
+        </div>
 
-        ${show.horario}
+        <small>
 
-    </small>
-`;
+            ${show.horario}
+
+        </small>
+
+    `;
 
     card.addEventListener("click",()=>{
 
         window.open(
+
             show.youtube,
+
             "_blank"
+
         );
 
     });
 
-    showsGrid.appendChild(card);
+    UI.shows.appendChild(card);
+
+}
+
+
+/*=========================================================
+  EVENTOS DEL PLAYER
+=========================================================*/
+
+UI.player.addEventListener("play",()=>{
+
+    actualizarEstado("LIVE");
 
 });
 
-const ultimaRadio =
-localStorage.getItem("ultimaRadio");
+UI.player.addEventListener("pause",()=>{
 
-if(ultimaRadio){              // ← Abre IF 1
-
-    const radioGuardada =
-    radios.find(r =>
-        r.nombre === ultimaRadio
-    );
-
-    if(radioGuardada){        // ← Abre IF 2
-
-        radioActual = radioGuardada;
-
-        logoGrande.src =
-        radioGuardada.logo;
-
-        radioNombre.textContent =
-        radioGuardada.nombre;
-
-        radioDescripcion.textContent =
-        radioGuardada.descripcion;
-
-        playIcon.innerHTML = `
-            <path d="M8 5v14l11-7z"></path>
-        `;
-
-        playStatus.textContent = "STOPPED";
-
-        playStatus.style.color = "#8A8F98";
-
-        logoGrande.classList.remove("reproduciendo");
-
-        document
-        .querySelector(".equalizer")
-        .classList.add("paused");
-
-    console.log(
-    "Estado inicial:",
-    document.querySelector(".equalizer").className
-);
-
-    }   // ← Cierra if(radioGuardada)
-
-}                              // ← Cierra IF 1
-/* Animación del logo */
-
-player.addEventListener("play",()=>{
-
-    logoGrande.classList.add("reproduciendo");
-
-    playIcon.innerHTML = `
-        <rect x="6" y="5" width="4" height="14" rx="1"></rect>
-        <rect x="14" y="5" width="4" height="14" rx="1"></rect>
-    `;
-
-    playStatus.textContent = "LIVE";
-
-    playStatus.style.color = "#16A34A";
-
-    liveDot.style.background = "#22C55E";
-
-liveDot.style.boxShadow =
-"0 0 8px rgba(34,197,94,.55)";
-
-liveDot.style.animation =
-"livePulse 1.8s infinite";
-
-    document
-        .querySelector(".equalizer")
-        .classList.remove("paused");
+    actualizarEstado("PAUSED");
 
 });
 
-player.addEventListener("pause",()=>{
+UI.player.addEventListener("ended",()=>{
 
-    logoGrande.classList.remove("reproduciendo");
-
-    playIcon.innerHTML = `
-        <path d="M8 5v14l11-7z"></path>
-    `;
-
-    playStatus.textContent = "PAUSED";
-
-    playStatus.style.color = "#F59E0B";
-
-    liveDot.style.background = "#F59E0B";
-
-    liveDot.style.boxShadow =
-    "0 0 8px rgba(245,158,11,.55)";
-
-    liveDot.style.animation = "none";
-
-    document
-        .querySelector(".equalizer")
-        .classList.add("paused");
+    actualizarEstado("STOPPED");
 
 });
 
-document
-    .querySelector(".equalizer")
-    .classList.add("paused");
 
-});
-
-player.addEventListener("ended",()=>{
-
-    logoGrande.classList.remove("reproduciendo");
-
-    playIcon.innerHTML = `
-        <path d="M8 5v14l11-7z"></path>
-    `;
-
-    playStatus.textContent = "STOPPED";
-
-playStatus.style.color = "#8A8F98";
-
-    player.addEventListener("play",()=>{
-
-    logoGrande.classList.add("reproduciendo");
-
-    playIcon.innerHTML = `
-        <rect x="6" y="5" width="4" height="14" rx="1"></rect>
-        <rect x="14" y="5" width="4" height="14" rx="1"></rect>
-    `;
-
-    playStatus.textContent = "LIVE";
-
-    playStatus.style.color = "#16A34A";
-
-    liveDot.style.background = "#22C55E";
-
-    liveDot.style.boxShadow =
-    "0 0 8px rgba(34,197,94,.55)";
-
-    liveDot.style.animation =
-    "livePulse 1.8s infinite";
-
-    document
-        .querySelector(".equalizer")
-        .classList.remove("paused");
-
-});
-
-document
-    .querySelector(".equalizer")
-    .classList.add("paused");
-
-});
-
-/* Pantalla completa */
-
-logoGrande.addEventListener("click", () => {
-
-    document.body.classList.toggle(
-        "fullscreen"
-    );
-
-});
-
-/*=============================
+/*=========================================================
   CONTROL DE VOLUMEN
-==============================*/
+=========================================================*/
 
 const volumenGuardado =
 localStorage.getItem("volumen");
 
 if(volumenGuardado){
 
-    player.volume = volumenGuardado / 100;
+    UI.volume.value = volumenGuardado;
 
-    volumeSlider.value = volumenGuardado;
+    UI.player.volume =
+    volumenGuardado/100;
+
+    UI.tvPlayer.volume =
+    volumenGuardado/100;
 
 }else{
 
-    player.volume = 0.7;
+    UI.volume.value =
+    CONFIG.volumenInicial*100;
+
+    UI.player.volume =
+    CONFIG.volumenInicial;
+
+    UI.tvPlayer.volume =
+    CONFIG.volumenInicial;
 
 }
 
-volumeSlider.addEventListener("input",()=>{
+UI.volume.addEventListener("input",()=>{
 
     const volumen =
-    volumeSlider.value;
+    UI.volume.value;
 
-    player.volume =
-    volumen / 100;
+    UI.player.volume =
+    volumen/100;
 
-    tvPlayer.volume =
-    volumen / 100;
+    UI.tvPlayer.volume =
+    volumen/100;
 
     localStorage.setItem(
+
         "volumen",
+
         volumen
+
     );
 
 });
 
-/*=============================
+
+/*=========================================================
   PLAY / PAUSE
-==============================*/
-playToggle.addEventListener("click",()=>{
+=========================================================*/
 
-    if(player.paused){
+UI.playButton.addEventListener("click",()=>{
 
-        if(player.src){
+    if(UI.player.paused){
 
-            player.play();
+        if(App.radioActual){
 
-        }else if(radioActual){
-
-            cargarRadio(radioActual);
+            UI.player.play();
 
         }
 
     }else{
 
-        player.pause();
+        UI.player.pause();
 
     }
 
 });
+
+
+/*=========================================================
+  PANTALLA COMPLETA
+=========================================================*/
+
+UI.logo.addEventListener("click",()=>{
+
+    document.body.classList.toggle(
+
+        "fullscreen"
+
+    );
+
+});
+
+
+/*=========================================================
+  INICIALIZACIÓN
+=========================================================*/
+
+radios.forEach(crearTarjetaRadio);
+
+tvs.forEach(crearTarjetaTV);
+
+shows.forEach(crearTarjetaShow);
+
+
+const ultimaRadio =
+localStorage.getItem("ultimaRadio");
+
+if(ultimaRadio){
+
+    const radio = radios.find(
+
+        r=>r.nombre===ultimaRadio
+
+    );
+
+    if(radio){
+
+        App.radioActual = radio;
+
+        cambiarLogo(radio.logo);
+
+        cambiarInformacion(
+
+            radio.nombre,
+
+            radio.descripcion
+
+        );
+
+    }
+
+}
+
+actualizarEstado(
+
+    CONFIG.estadoInicial
+
+);
