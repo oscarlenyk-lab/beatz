@@ -475,7 +475,8 @@ function crearTarjetaRadio(radio){
 
     card.innerHTML = `
     <img src="${radio.logo}">
-	`;
+    <p>${radio.nombre}</p>
+`;
 
     card.addEventListener("click",()=>{
 
@@ -520,7 +521,7 @@ function crearTarjetaShow(show){
 
     const card = document.createElement("div");
 
-    card.className = "radio";
+    card.className = "show-card";
 
     card.innerHTML = `
     <img src="${show.logo}">
