@@ -117,28 +117,24 @@ const shows = [
     {
         nombre:"A State of Trance",
         logo:"logos/asot.png",
-        horario:"Jue • 12:00 PM",
         youtube:"https://www.youtube.com/@astateoftrance"
     },
 
     {
         nombre:"Group Therapy",
         logo:"logos/grouptherapy.png",
-        horario:"Vie • 1:00 PM",
         youtube:"https://www.youtube.com/@anjunabeats"
     },
 
     {
         nombre:"Future Sound of Egypt",
         logo:"logos/fsoe.png",
-        horario:"Mie • 1:00 PM",
         youtube:"https://www.youtube.com/@FutureSoundOfEgypt"
     },
 
     {
         nombre:"Corsten's Countdown",
         logo:"logos/corsten.png",
-        horario:"Mie • 12:00 PM",
         youtube:"https://www.youtube.com/@ferrycorsten"
     }
 
