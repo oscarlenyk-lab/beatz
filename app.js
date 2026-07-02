@@ -416,6 +416,33 @@ player.addEventListener("pause",()=>{
 
 playStatus.style.color = "#F59E0B";
 
+    player.addEventListener("play",()=>{
+
+    logoGrande.classList.add("reproduciendo");
+
+    playIcon.innerHTML = `
+        <rect x="6" y="5" width="4" height="14" rx="1"></rect>
+        <rect x="14" y="5" width="4" height="14" rx="1"></rect>
+    `;
+
+    playStatus.textContent = "LIVE";
+
+    playStatus.style.color = "#16A34A";
+
+    liveDot.style.background = "#22C55E";
+
+    liveDot.style.boxShadow =
+    "0 0 8px rgba(34,197,94,.55)";
+
+    liveDot.style.animation =
+    "livePulse 1.8s infinite";
+
+    document
+        .querySelector(".equalizer")
+        .classList.remove("paused");
+
+});
+
 document
     .querySelector(".equalizer")
     .classList.add("paused");
@@ -433,6 +460,33 @@ player.addEventListener("ended",()=>{
     playStatus.textContent = "STOPPED";
 
 playStatus.style.color = "#8A8F98";
+
+    player.addEventListener("play",()=>{
+
+    logoGrande.classList.add("reproduciendo");
+
+    playIcon.innerHTML = `
+        <rect x="6" y="5" width="4" height="14" rx="1"></rect>
+        <rect x="14" y="5" width="4" height="14" rx="1"></rect>
+    `;
+
+    playStatus.textContent = "LIVE";
+
+    playStatus.style.color = "#16A34A";
+
+    liveDot.style.background = "#22C55E";
+
+    liveDot.style.boxShadow =
+    "0 0 8px rgba(34,197,94,.55)";
+
+    liveDot.style.animation =
+    "livePulse 1.8s infinite";
+
+    document
+        .querySelector(".equalizer")
+        .classList.remove("paused");
+
+});
 
 document
     .querySelector(".equalizer")
