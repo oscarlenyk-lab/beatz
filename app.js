@@ -129,6 +129,9 @@ document.getElementById("playIcon");
 const playStatus =
 document.getElementById("playStatus");
 
+const liveDot =
+document.querySelector(".live-dot");
+
 let radioActual = null;
 
 function cargarRadio(radio){
@@ -386,6 +389,14 @@ player.addEventListener("play",()=>{
     playStatus.textContent = "LIVE";
 
     playStatus.style.color = "#16A34A";
+
+    liveDot.style.background = "#22C55E";
+
+liveDot.style.boxShadow =
+"0 0 8px rgba(34,197,94,.55)";
+
+liveDot.style.animation =
+"livePulse 1.8s infinite";
 
     document
         .querySelector(".equalizer")
