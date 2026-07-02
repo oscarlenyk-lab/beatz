@@ -576,6 +576,8 @@ audio{
 
 #tvPlayer{
 
+    display:none;
+
     width:95%;
 
     max-width:900px;
@@ -584,10 +586,9 @@ audio{
 
     border-radius:20px;
 
-    display:block;
-
     box-shadow:
-    0 10px 25px rgba(0,0,0,.15);
+        0 10px 25px rgba(0,0,0,.15);
+
 }
 
 .section-title::before{
