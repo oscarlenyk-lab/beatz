@@ -388,6 +388,57 @@ audio{
 
 }
 
+/*=========================================================
+  FEATURED SHOWS
+=========================================================*/
+
+.show-card{
+
+    background:#FFFFFF;
+
+    border-radius:18px;
+
+    padding:14px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    min-height:140px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.08);
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.show-card img:first-child{
+
+    width:84px;
+
+    height:84px;
+
+    object-fit:contain;
+
+    border-radius:12px;
+
+}
+
+.show-card .youtube-badge{
+
+    margin-top:6px;
+
+}
+
 @keyframes livePulse{
 
     0%{
