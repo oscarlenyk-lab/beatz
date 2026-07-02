@@ -353,9 +353,6 @@ function detenerTV(){
     }
 
     UI.tvPlayer.pause();
-
-    UI.tvPlayer.style.display = "none";
-
 }
 
 function cargarRadio(radio){
@@ -363,6 +360,8 @@ function cargarRadio(radio){
     App.radioActual = radio;
 
     detenerTV();
+
+    UI.tvPlayer.style.display = "none";
 
     cambiarLogo(radio.logo);
 
@@ -420,6 +419,8 @@ function cargarRadio(radio){
 
 function cargarTV(tv){
 
+    detenerTV();
+
     detenerHLS();
 
     UI.player.pause();
@@ -434,12 +435,9 @@ function cargarTV(tv){
 
     );
 
-    UI.tvPlayer.style.display =
-    "block";
+    UI.tvPlayer.style.display = "block";
 
     if(Hls.isSupported()){
-
-        detenerTV();
 
         App.tvHls = new Hls();
 
