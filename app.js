@@ -523,25 +523,16 @@ function crearTarjetaShow(show){
     card.className = "radio";
 
     card.innerHTML = `
-        <img src="${show.logo}" alt="${show.nombre}">
+    <img src="${show.logo}">
 
-        <p>${show.nombre}</p>
+    <div class="youtube-badge">
 
-        <div class="youtube-badge">
+        <img src="logos/youtube.png">
 
-            <img src="logos/youtube.png">
+        <span>YouTube</span>
 
-            <span>YouTube</span>
-
-        </div>
-
-        <small>
-
-            ${show.horario}
-
-        </small>
-
-    `;
+    </div>
+`;
 
     card.addEventListener("click",()=>{
 
