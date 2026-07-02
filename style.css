@@ -261,13 +261,14 @@ body{
 
     border-radius:50%;
 
-    background:#22C55E;
+    background:#9CA3AF;
 
     box-shadow:
-        0 0 8px rgba(34,197,94,.55);
+        0 0 8px rgba(156,163,175,.45);
 
-    animation:
-        livePulse 1.8s infinite;
+    transition:
+        background .30s ease,
+        box-shadow .30s ease;
 
 }
 
