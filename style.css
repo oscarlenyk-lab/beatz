@@ -990,3 +990,119 @@ audio{
     100%{ transform:scaleY(.35); }
 
 }
+
+/*=============================
+ MINI PLAYER
+=============================*/
+
+.mini-player{
+
+    position:fixed;
+
+    left:16px;
+
+    right:16px;
+
+    bottom:14px;
+
+    height:72px;
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:10px 16px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.18);
+
+    z-index:9999;
+
+}
+
+.mini-logo{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:12px;
+
+    object-fit:contain;
+
+    background:white;
+
+}
+
+.mini-info{
+
+    flex:1;
+
+    overflow:hidden;
+
+}
+
+.mini-title{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#222;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+.mini-subtitle{
+
+    font-size:13px;
+
+    color:#777;
+
+    margin-top:4px;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+.mini-play{
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    background:linear-gradient(
+        135deg,
+        #29C7F6,
+        #6B5CFF,
+        #FF3CA2
+    );
+
+}
