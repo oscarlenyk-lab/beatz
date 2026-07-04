@@ -673,7 +673,7 @@ UI.miniPlay.addEventListener("click",()=>{
 
         if(App.radioActual){
 
-            UI.player.play();
+            cargarRadio(App.radioActual);
 
         }
 
