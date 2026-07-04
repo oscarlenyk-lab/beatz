@@ -396,19 +396,19 @@ audio{
 
     align-items:center;
 
-    gap:8px;
+    gap:12px;
 
-    width:94%;
-
-    margin:0 auto;
+    width:100%;
 
     background:#fff;
 
     border-radius:16px;
 
-    padding:8px;
+    padding:10px;
 
     height:78px;
+
+    box-sizing:border-box;
 
     box-shadow:
         0 6px 16px rgba(0,0,0,.08);
@@ -437,25 +437,23 @@ audio{
 
     justify-content:center;
 
-    align-items:center;
+    align-items:flex-start;
+
+    gap:6px;
 
     flex:1;
-
-    gap:8px;
 
 }
 
 .show-time{
 
-    font-size:14px;
+    font-size:12px;
 
     font-weight:600;
 
-    color:#555;
+    color:#666;
 
-    text-align:center;
-
-    line-height:1.3;
+    line-height:1.2;
 
 }
 
@@ -760,25 +758,17 @@ audio{
 
     align-items:center;
 
-    justify-content:center;
+    gap:5px;
 
-    gap:6px;
+    padding:3px 8px;
 
-    margin:8px auto 6px;
+    margin:0;
 
-    padding:4px 10px;
+    border-radius:18px;
 
-    background:#FFF5F5;
-
-    border:1px solid #FFE0E0;
-
-    border-radius:20px;
-
-    font-size:11px;
+    font-size:10px;
 
     font-weight:600;
-
-    color:#D60000;
 
 }
 
