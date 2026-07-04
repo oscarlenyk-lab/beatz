@@ -584,6 +584,14 @@ UI.player.addEventListener("play",()=>{
 
 });
 
+UI.player.addEventListener("pause",()=>{
+
+    actualizarEstado("STOPPED");
+
+    UI.miniPlay.innerHTML = "▶";
+
+});
+
 UI.player.addEventListener("ended",()=>{
 
     actualizarEstado("STOPPED");
