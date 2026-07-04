@@ -177,7 +177,7 @@ const UI = {
 
     tvs: document.getElementById("tvs"),
 
-    shows: document.getElementById("shows")
+    shows: document.getElementById("shows"),
 
     miniLogo: document.getElementById("miniLogo"),
 
