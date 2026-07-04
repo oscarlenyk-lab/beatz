@@ -447,13 +447,17 @@ audio{
 
 .show-time{
 
-    font-size:12px;
+    font-size:13px;
 
     font-weight:600;
 
     color:#666;
 
+    text-align:center;
+
     line-height:1.2;
+
+    white-space:nowrap;
 
 }
 
