@@ -580,17 +580,15 @@ UI.player.addEventListener("play",()=>{
 
     actualizarEstado("LIVE");
 
-});
-
-UI.player.addEventListener("pause",()=>{
-
-    actualizarEstado("PAUSED");
+    UI.miniPlay.innerHTML = "❚❚";
 
 });
 
 UI.player.addEventListener("ended",()=>{
 
     actualizarEstado("STOPPED");
+
+    UI.miniPlay.innerHTML = "▶";
 
 });
 
@@ -671,7 +669,19 @@ UI.playButton.addEventListener("click",()=>{
 
 UI.miniPlay.addEventListener("click",()=>{
 
-    UI.playButton.click();
+    if(UI.player.paused){
+
+        if(App.radioActual){
+
+            UI.player.play();
+
+        }
+
+    }else{
+
+        UI.player.pause();
+
+    }
 
 });
 
