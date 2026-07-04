@@ -6,19 +6,16 @@ body{
 
     margin:0;
 
+    padding-bottom:90px;
+
     background:#F8F9FB;
 
-    color:#222;
-
     font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
 
-    overflow-x:hidden;
-
-    padding-bottom:100px;
+    color:#222;
 
 }
 
@@ -1004,17 +1001,17 @@ audio{
 
     position:fixed;
 
-    left:12px;
+    left:16px;
 
-    right:12px;
+    right:16px;
 
-    bottom:12px;
+    bottom:14px;
 
-    height:64px;
+    height:72px;
 
-    background:rgba(255,255,255,.96);
+    background:rgba(255,255,255,.95);
 
-    backdrop-filter:blur(18px);
+    backdrop-filter:blur(20px);
 
     border-radius:22px;
 
@@ -1022,12 +1019,12 @@ audio{
 
     align-items:center;
 
-    gap:12px;
+    gap:14px;
 
-    padding:8px 14px;
+    padding:10px 16px;
 
     box-shadow:
-        0 8px 24px rgba(0,0,0,.18);
+        0 10px 30px rgba(0,0,0,.18);
 
     z-index:9999;
 
@@ -1035,15 +1032,15 @@ audio{
 
 .mini-logo{
 
-    width:44px;
+    width:52px;
 
-    height:44px;
+    height:52px;
 
     border-radius:12px;
 
-    background:white;
-
     object-fit:contain;
+
+    background:white;
 
 }
 
@@ -1057,11 +1054,11 @@ audio{
 
 .mini-title{
 
-    font-size:16px;
+    font-size:18px;
 
     font-weight:700;
 
-    color:#111;
+    color:#222;
 
     white-space:nowrap;
 
@@ -1073,11 +1070,11 @@ audio{
 
 .mini-subtitle{
 
-    font-size:12px;
+    font-size:13px;
 
     color:#777;
 
-    margin-top:2px;
+    margin-top:4px;
 
     white-space:nowrap;
 
@@ -1089,25 +1086,19 @@ audio{
 
 .mini-play{
 
-    width:46px;
+    width:52px;
 
-    height:46px;
+    height:52px;
 
     border:none;
 
     border-radius:50%;
 
-    cursor:pointer;
-
     color:white;
 
-    font-size:18px;
+    font-size:22px;
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
+    cursor:pointer;
 
     background:linear-gradient(
         135deg,
@@ -1115,20 +1106,5 @@ audio{
         #6B5CFF,
         #FF3CA2
     );
-
-    box-shadow:
-        0 4px 14px rgba(107,92,255,.45);
-
-}
-
-.mini-player{
-
-    transition:.30s ease;
-
-}
-
-.mini-play:hover{
-
-    transform:scale(1.08);
 
 }
