@@ -396,22 +396,22 @@ audio{
 
     align-items:center;
 
-    gap:12px;
+    gap:8px;
 
-    background:#FFFFFF;
+    width:95%;
+
+    margin:0 auto;
+
+    background:#fff;
 
     border-radius:16px;
 
-    padding:12px;
+    padding:8px;
 
-    min-height:78px;
+    height:78px;
 
     box-shadow:
         0 6px 16px rgba(0,0,0,.08);
-
-    cursor:pointer;
-
-    transition:.25s;
 
 }
 
