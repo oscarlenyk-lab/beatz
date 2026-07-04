@@ -178,14 +178,6 @@ const UI = {
     tvs: document.getElementById("tvs"),
 
     shows: document.getElementById("shows")
-	
-	miniLogo: document.getElementById("miniLogo"),
-
-	miniNombre: document.getElementById("miniNombre"),
-
-	miniDescripcion: document.getElementById("miniDescripcion"),
-
-	miniPlay: document.getElementById("miniPlay")
 
 };
 
@@ -204,8 +196,6 @@ function cambiarLogo(src){
 
         UI.logo.src = src;
 
-        UI.miniLogo.src = src;   // <-- Agrega esta línea
-
         UI.logo.onload = ()=>{
 
             UI.logo.style.opacity = "1";
@@ -222,10 +212,6 @@ function cambiarInformacion(nombre, descripcion){
     UI.nombre.textContent = nombre;
 
     UI.descripcion.textContent = descripcion;
-
-    UI.miniNombre.textContent = nombre;
-
-    UI.miniDescripcion.textContent = descripcion;
 
 }
 
@@ -669,12 +655,6 @@ UI.playButton.addEventListener("click",()=>{
 
 });
 
-UI.miniPlay.addEventListener("click",()=>{
-
-    UI.playButton.click();
-
-});
-
 
 /*=========================================================
   PANTALLA COMPLETA
@@ -736,9 +716,3 @@ actualizarEstado(
     CONFIG.estadoInicial
 
 );
-
-UI.miniPlay.addEventListener("click",()=>{
-
-    UI.playToggle.click();
-
-});
