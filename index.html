@@ -4,71 +4,59 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>Beatz</title>
 
+    <!-- PWA -->
     <link rel="manifest" href="manifest.json">
 
-    <meta name="theme-color" content="#6B5CFF">
+    <meta
+        name="theme-color"
+        content="#6B5CFF">
 
-    <link rel="stylesheet" href="style.css">
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="style.css">
 
 </head>
 
-<div id="miniPlayer" class="mini-player">
-
-    <img
-        id="miniLogo"
-        src="logos/m2o.png"
-        class="mini-logo">
-
-    <div class="mini-info">
-
-        <div id="miniNombre" class="mini-title">
-
-            Bienvenido a Beatz
-
-        </div>
-
-        <div id="miniDescripcion" class="mini-subtitle">
-
-            Electronic Music Worldwide
-
-        </div>
-
-    </div>
-
-    <button id="miniPlay" class="mini-play">
-
-        ▶
-
-    </button>
-
-</div>
-    
 <body>
 
-<div class="header">
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
 
     <div class="brand">
 
         <img
-    src="logos/b.png"
-    alt="Beatz"
-    class="brand-logo">
+            src="logos/b.png"
+            alt="Beatz"
+            class="brand-logo">
 
         <h1>Beatz</h1>
 
     </div>
 
     <p class="tagline">
+
         Feel The Beat
+
     </p>
 
-</div>
+</header>
 
-<div class="player-section">
+<!-- =====================================================
+     PLAYER PRINCIPAL
+===================================================== -->
+
+<section class="player-section">
 
     <div class="player-card">
 
@@ -114,68 +102,176 @@
         </div>
 
     </div>
-    
-    <div class="play-control">
+
+    <!-- Barra de volumen -->
 
     <div class="volume-control">
 
-    <input
-        type="range"
-        id="volumeSlider"
-        min="0"
-        max="100"
-        value="70">
+        <input
+            id="volumeSlider"
+            type="range"
+            min="0"
+            max="100"
+            value="70">
 
-</div>
+    </div>
 
-<audio id="player"></audio>
+    <audio id="player"></audio>
 
-</div>
+</section>
+
+<!-- =====================================================
+     RADIO STATIONS
+===================================================== -->
+
+<section class="content-section">
 
     <h2 class="section-title">
-    Radio Stations
-</h2>
 
-<div id="radios" class="radios-grid"></div>
+        Radio Stations
 
-<h2 class="section-title">
-    Music TV
-</h2>
+    </h2>
 
-<div id="tvs" class="radios-grid"></div>
+    <div
+        id="radios"
+        class="radios-grid">
 
-<video
-    id="tvPlayer"
-    controls
-    playsinline>
-</video>
+    </div>
 
-<h2 class="section-title">
-Featured Shows
-</h2>
+</section>
 
-<div id="shows" class="radios-grid"></div>
+<!-- =====================================================
+     MUSIC TV
+===================================================== -->
+
+<section class="content-section">
+
+    <h2 class="section-title">
+
+        Music TV
+
+    </h2>
+
+    <div
+        id="tvs"
+        class="radios-grid">
+
+    </div>
+
+    <video
+        id="tvPlayer"
+        controls
+        playsinline>
+
+    </video>
+
+</section>
+
+<!-- =====================================================
+     FEATURED SHOWS
+===================================================== -->
+
+<section class="content-section">
+
+    <h2 class="section-title">
+
+        Featured Shows
+
+    </h2>
+
+    <div
+        id="shows"
+        class="radios-grid">
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     MINI PLAYER
+===================================================== -->
+
+<div
+    id="miniPlayer"
+    class="mini-player">
+
+    <img
+        id="miniLogo"
+        class="mini-logo"
+        src="logos/m2o.png"
+        alt="Radio">
+
+    <div class="mini-info">
+
+        <div
+            id="miniNombre"
+            class="mini-title">
+
+            Bienvenido a Beatz
+
+        </div>
+
+        <div
+            id="miniDescripcion"
+            class="mini-subtitle">
+
+            Electronic Music Worldwide
+
+        </div>
+
+    </div>
+
+    <button
+        id="miniPlay"
+        class="mini-play"
+        aria-label="Play / Pause">
+
+        ▶
+
+    </button>
+
+</div>
+
+<!-- =====================================================
+     LIBRERÍAS
+===================================================== -->
 
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
 <script src="app.js"></script>
 
+<!-- =====================================================
+     SERVICE WORKER
+===================================================== -->
+
 <script>
+
 if ("serviceWorker" in navigator) {
 
     window.addEventListener("load", () => {
 
-        navigator.serviceWorker.register("./service-worker.js")
-        .then(() => {
-            console.log("Service Worker registrado");
-        })
-        .catch(err => {
-            console.error(err);
-        });
+        navigator.serviceWorker
+
+            .register("./service-worker.js")
+
+            .then(() => {
+
+                console.log("Service Worker registrado");
+
+            })
+
+            .catch(err => {
+
+                console.error(err);
+
+            });
 
     });
 
 }
+
 </script>
 
 </body>
+
 </html>
