@@ -161,10 +161,6 @@ const UI = {
 
     descripcion: document.getElementById("radioDescripcion"),
 
-    playButton: document.getElementById("playToggle"),
-
-    playIcon: document.getElementById("playIcon"),
-
     playStatus: document.getElementById("playStatus"),
 
     liveDot: document.querySelector(".live-dot"),
@@ -649,47 +645,6 @@ UI.volume.addEventListener("input",()=>{
         volumen
 
     );
-
-});
-
-
-/*=========================================================
-  PLAY / PAUSE
-=========================================================*/
-
-UI.playButton.addEventListener("click",()=>{
-
-    if(UI.player.paused){
-
-        if(App.radioActual){
-
-            UI.player.play();
-
-        }
-
-    }else{
-
-        UI.player.pause();
-
-    }
-
-});
-
-UI.miniPlay.addEventListener("click",()=>{
-
-    if(UI.player.paused){
-
-        if(App.radioActual){
-
-            cargarRadio(App.radioActual);
-
-        }
-
-    }else{
-
-        UI.player.pause();
-
-    }
 
 });
 
