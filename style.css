@@ -1001,9 +1001,9 @@ audio{
 
     height:72px;
 
-    background:rgba(255,255,255,.95);
+    background:rgba(255,255,255,.92);
 
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(14px);
 
     border-radius:22px;
 
