@@ -44,24 +44,9 @@ body{
 
     font-weight:800;
 
+    color:#FFFFFF;
+
     letter-spacing:-0.5px;
-
-    background:linear-gradient(
-        90deg,
-        #7FE7FF 0%,
-        #D8F7FF 18%,
-        #A7C8FF 45%,
-        #B58CFF 72%,
-        #E4C8FF 100%
-    );
-
-    -webkit-background-clip:text;
-    background-clip:text;
-
-    -webkit-text-fill-color:transparent;
-
-    text-shadow:
-        0 1px 1px rgba(255,255,255,.15);
 
 }
 
@@ -104,15 +89,13 @@ body{
 
     margin-top:2px;
 
-    margin-bottom:0;
-
     font-size:14px;
 
     font-weight:500;
 
-    letter-spacing:1.2px;
+    color:rgba(255,255,255,.90);
 
-    color:rgba(255,255,255,.92);
+    letter-spacing:1px;
 
 }
 
@@ -915,11 +898,11 @@ audio{
 
     height:58px;
 
-    background:rgba(255,255,255,.94);
+    background:rgba(255,255,255,.88);
 
-    backdrop-filter:blur(14px);
+    backdrop-filter:blur(18px);
 
-    border-radius:20px;
+    border:1px solid rgba(255,255,255,.45);
 
     display:flex;
 
@@ -930,7 +913,7 @@ audio{
     padding:8px 14px;
 
     box-shadow:
-        0 8px 22px rgba(0,0,0,.14);
+        0 10px 30px rgba(0,0,0,.12);
 
     z-index:9999;
 
