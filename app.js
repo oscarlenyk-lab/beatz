@@ -526,9 +526,9 @@ function crearTarjetaShow(show){
 
     <div class="show-right">
 
-        <div class="youtube-link">
+        <div class="show-label">
 
-            <img src="logos/youtube-black.svg" alt="YouTube">
+        Live Show
 
         </div>
 
