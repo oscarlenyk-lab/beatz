@@ -44,7 +44,24 @@ body{
 
     font-weight:800;
 
-    color:#FFFFFF;
+    letter-spacing:-0.5px;
+
+    background:linear-gradient(
+        90deg,
+        #7FE7FF 0%,
+        #D8F7FF 18%,
+        #A7C8FF 45%,
+        #B58CFF 72%,
+        #E4C8FF 100%
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 1px 1px rgba(255,255,255,.15);
 
 }
 
@@ -59,7 +76,7 @@ body{
 
     gap:8px;
 
-    margin-bottom:6px;
+    margin-bottom:4px;
 
 }
 
@@ -93,9 +110,9 @@ body{
 
     font-weight:500;
 
-    color:rgba(255,255,255,.90);
+    letter-spacing:1.2px;
 
-    letter-spacing:1px;
+    color:rgba(255,255,255,.92);
 
 }
 
@@ -437,7 +454,7 @@ audio{
 
     align-items:flex-start;
 
-    gap:6px;
+    gap:5px;
 
     flex:1;
 
@@ -445,21 +462,13 @@ audio{
 
 .show-time{
 
-    display:flex;
+    font-size:13px;
 
-    align-items:center;
+    font-weight:500;
 
-    gap:6px;
+    color:#666;
 
-    margin-top:5px;
-
-    width:100%;
-
-    font-size:12px;
-
-    font-weight:600;
-
-    color:#707070;
+    letter-spacing:.2px;
 
 }
 
@@ -730,23 +739,23 @@ audio{
 
 .youtube-link{
 
+    width:100%;
+
     display:flex;
 
-    align-items:center;
+    justify-content:flex-start;
 
-    width:100%;
+    align-items:center;
 
 }
 
 .youtube-link img{
 
-    width:18px;
+    width:14px;
 
-    height:18px;
+    height:14px;
 
-    object-fit:contain;
-
-    opacity:.75;
+    opacity:.55;
 
 }
 
