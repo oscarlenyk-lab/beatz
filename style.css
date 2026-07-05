@@ -532,36 +532,6 @@ audio{
     transition:all .4s ease;
 }
 
-.mini-player{
-
-    position:fixed;
-
-    bottom:0;
-
-    left:0;
-
-    right:0;
-
-    height:70px;
-
-    background:white;
-
-    border-top:1px solid #e5e5e5;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:15px;
-
-    padding:10px 15px;
-
-    box-shadow:
-    0 -2px 10px rgba(0,0,0,.05);
-}
-
 #miniLogo{
 
     width:50px;
@@ -909,123 +879,30 @@ audio{
 
     bottom:14px;
 
-    height:72px;
+    height:62px;
 
-    background:rgba(255,255,255,.92);
+    background:rgba(255,255,255,.94);
 
     backdrop-filter:blur(14px);
 
-    border-radius:22px;
+    border-radius:20px;
 
     display:flex;
 
     align-items:center;
 
-    gap:14px;
+    gap:12px;
 
-    padding:10px 16px;
+    padding:8px 14px;
 
     box-shadow:
-        0 10px 30px rgba(0,0,0,.18);
+        0 8px 22px rgba(0,0,0,.14);
 
     z-index:9999;
 
 }
 
-.mini-logo{
 
-    width:52px;
-
-    height:52px;
-
-    border-radius:12px;
-
-    object-fit:contain;
-
-    background:white;
-
-}
-
-.mini-info{
-
-    flex:1;
-
-    overflow:hidden;
-
-}
-
-.mini-title{
-
-    font-size:18px;
-
-    font-weight:700;
-
-    color:#222;
-
-    white-space:nowrap;
-
-    overflow:hidden;
-
-    text-overflow:ellipsis;
-
-}
-
-.mini-subtitle{
-
-    font-size:13px;
-
-    color:#777;
-
-    margin-top:4px;
-
-    white-space:nowrap;
-
-    overflow:hidden;
-
-    text-overflow:ellipsis;
-
-}
-
-.mini-play{
-
-    width:60px;
-
-    height:60px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:
-        linear-gradient(
-            135deg,
-            #25C8F7,
-            #6B5CFF,
-            #FF4FA3
-        );
-
-    color:#FFF;
-
-    font-size:24px;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    box-shadow:
-        0 8px 20px rgba(107,92,255,.35);
-
-    transition:.25s;
-
-    flex-shrink:0;
-
-}
 
 .mini-logo{
 
