@@ -266,9 +266,6 @@ function actualizarEstado(estado){
 
             UI.logo.classList.add("reproduciendo");
 
-            UI.playIcon.innerHTML = `
-                <rect x="6" y="5" width="4" height="14" rx="1"></rect>
-                <rect x="14" y="5" width="4" height="14" rx="1"></rect>
             `;
 
         break;
@@ -295,8 +292,6 @@ function actualizarEstado(estado){
 
             UI.logo.classList.remove("reproduciendo");
 
-            UI.playIcon.innerHTML = `
-                <path d="M8 5v14l11-7z"></path>
             `;
 
         break;
@@ -323,8 +318,6 @@ function actualizarEstado(estado){
 
             UI.logo.classList.remove("reproduciendo");
 
-            UI.playIcon.innerHTML = `
-                <path d="M8 5v14l11-7z"></path>
             `;
 
         break;
@@ -712,6 +705,18 @@ actualizarEstado(
 
 UI.miniPlay.addEventListener("click",()=>{
 
-    UI.playToggle.click();
+    if(UI.player.paused){
+
+        if(App.radioActual){
+
+            cargarRadio(App.radioActual);
+
+        }
+
+    }else{
+
+        UI.player.pause();
+
+    }
 
 });
