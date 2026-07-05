@@ -534,7 +534,7 @@ function crearTarjetaShow(show){
 
         <div class="show-time">
 
-            📅 ${show.horario}
+            ${show.horario}
 
         </div>
 
