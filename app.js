@@ -522,27 +522,25 @@ function crearTarjetaShow(show){
 
     card.innerHTML = `
 
-        <img src="${show.logo}" alt="${show.nombre}">
+    <img src="${show.logo}" alt="${show.nombre}">
 
-        <div class="show-right">
+    <div class="show-right">
 
-            <div class="youtube-badge">
+        <div class="youtube-link">
 
-                <img src="logos/youtube.png">
-
-                <span>YouTube</span>
-
-            </div>
-
-            <div class="show-time">
-
-                ${show.horario}
-
-            </div>
+            <img src="logos/youtube-black.svg" alt="YouTube">
 
         </div>
 
-    `;
+        <div class="show-time">
+
+            📅 ${show.horario}
+
+        </div>
+
+    </div>
+
+`;
 
     card.addEventListener("click",()=>{
 
