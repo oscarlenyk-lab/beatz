@@ -265,10 +265,8 @@ function actualizarEstado(estado){
             UI.equalizer.classList.remove("paused");
 
             UI.logo.classList.add("reproduciendo");
-
-            `;
-
-        break;
+            
+            break;
 
 
 
@@ -292,9 +290,7 @@ function actualizarEstado(estado){
 
             UI.logo.classList.remove("reproduciendo");
 
-            `;
-
-        break;
+            break;
 
 
 
@@ -318,9 +314,7 @@ function actualizarEstado(estado){
 
             UI.logo.classList.remove("reproduciendo");
 
-            `;
-
-        break;
+            break;
 
     }
 
