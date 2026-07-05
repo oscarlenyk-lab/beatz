@@ -454,7 +454,7 @@ audio{
 
     align-items:flex-start;
 
-    gap:5px;
+    gap:4px;
 
     flex:1;
 
@@ -462,11 +462,13 @@ audio{
 
 .show-time{
 
-    font-size:13px;
+    margin-top:3px;
+
+    font-size:12px;
 
     font-weight:500;
 
-    color:#666;
+    color:#7A7A7A;
 
     letter-spacing:.2px;
 
@@ -478,6 +480,43 @@ audio{
 
     box-shadow:
         0 8px 18px rgba(0,0,0,.10);
+
+}
+
+.show-label{
+
+    display:flex;
+
+    align-items:center;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    color:#444;
+
+    letter-spacing:.2px;
+
+}
+
+.show-label::before{
+
+    content:"";
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    margin-right:8px;
+
+    background:#22C55E;
+
+    box-shadow:
+        0 0 8px rgba(34,197,94,.45);
+
+    animation:livePulse 2s infinite;
 
 }
 
