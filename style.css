@@ -447,17 +447,21 @@ audio{
 
 .show-time{
 
-    font-size:13px;
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    margin-top:5px;
+
+    width:100%;
+
+    font-size:12px;
 
     font-weight:600;
 
-    color:#666;
-
-    text-align:center;
-
-    line-height:1.2;
-
-    white-space:nowrap;
+    color:#707070;
 
 }
 
@@ -726,41 +730,25 @@ audio{
 
 }
 
-.youtube-badge{
+.youtube-link{
 
-    display:inline-flex;
+    display:flex;
 
     align-items:center;
 
-    gap:5px;
-
-    padding:3px 8px;
-
-    margin:0;
-
-    border-radius:18px;
-
-    font-size:10px;
-
-    font-weight:600;
+    width:100%;
 
 }
 
-.youtube-badge img{
+.youtube-link img{
 
-    width:16px;
+    width:18px;
 
-    height:16px;
+    height:18px;
 
-    display:block;
+    object-fit:contain;
 
-}
-
-.show-card:hover .youtube-badge{
-
-    transform:scale(1.05);
-
-    transition:.20s ease;
+    opacity:.75;
 
 }
 
