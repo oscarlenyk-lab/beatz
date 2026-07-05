@@ -61,8 +61,6 @@ body{
 
     gap:8px;
 
-    margin-bottom:4px;
-
 }
 
 .brand-logo{
@@ -82,6 +80,16 @@ body{
     transition:
         transform .25s ease,
         filter .25s ease;
+
+}
+
+.brand-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
 
 }
 
