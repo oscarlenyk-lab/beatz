@@ -398,6 +398,10 @@ audio{
 
 .show-card{
 
+    position:relative;
+
+    overflow:hidden;
+
     display:flex;
 
     align-items:center;
@@ -418,6 +422,40 @@ audio{
 
     box-shadow:
         0 6px 16px rgba(0,0,0,.08);
+
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease;
+
+}
+
+.show-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:12px;
+
+    bottom:12px;
+
+    width:3px;
+
+    border-radius:3px;
+
+    background:linear-gradient(
+        180deg,
+        #25C8F7,
+        #4B7BFF,
+        #8C52FF,
+        #FF4FA3
+    );
+
+    opacity:1;
+
+    transition:opacity .22s ease;
 
 }
 
@@ -463,10 +501,12 @@ audio{
 
 .show-card:hover{
 
-    transform:translateY(-2px);
+    transform:
+        translateY(-3px)
+        scale(1.015);
 
     box-shadow:
-        0 8px 18px rgba(0,0,0,.10);
+        0 12px 28px rgba(0,0,0,.12);
 
 }
 
