@@ -813,7 +813,7 @@ audio{
 
     -webkit-appearance:none;
 
-    background:#E6EEF8;
+    background:var(--slider);
 
     border-radius:20px;
 
@@ -842,7 +842,7 @@ audio{
         #FF4FA3
     );
 
-    border:3px solid #FFFFFF;
+    border:3px solid var(--card);
 
     cursor:pointer;
 
@@ -865,7 +865,7 @@ audio{
 
     border-radius:50%;
 
-    border:3px solid white;
+    border:3px solid var(--card);
 
     background:#8C52FF;
 
