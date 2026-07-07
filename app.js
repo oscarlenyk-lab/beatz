@@ -246,6 +246,11 @@ function aplicarTema(tema){
         tema==="dark"
     );
 
+    localStorage.setItem(
+        "tema",
+        tema
+    );
+
 }
 
 function cambiarTema(){
@@ -688,6 +693,19 @@ radios.forEach(crearTarjetaRadio);
 tvs.forEach(crearTarjetaTV);
 
 shows.forEach(crearTarjetaShow);
+
+
+
+const temaGuardado =
+
+    localStorage.getItem("tema")
+
+    || "light";
+
+aplicarTema(
+    temaGuardado
+);
+
 
 
 const ultimaRadio =
