@@ -191,7 +191,7 @@ body{
     width:100%;
 
     background:
-        linear-gradient(#FFFFFF,#FFFFFF) padding-box,
+        linear-gradient(var(--card),var(--card)) padding-box,
 
         linear-gradient(
             90deg,
@@ -285,7 +285,7 @@ body{
 
     font-size:15px;
 
-    color:#777;
+    color:var(--text-secondary);
 
     line-height:1.3;
 
