@@ -181,7 +181,9 @@ const UI = {
 
     miniDescripcion: document.getElementById("miniDescripcion"),
 
-    miniPlay: document.getElementById("miniPlay")
+    miniPlay: document.getElementById("miniPlay"),
+
+	themeToggle: document.getElementById("themeToggle")
 
 };
 
