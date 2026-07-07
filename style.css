@@ -22,6 +22,8 @@
 
     --text-secondary:#777777;
 	
+	--text-muted:#8A8A8A;
+	
 	--text-light:#FFFFFF;
 
     /* ---------- Bordes ---------- */
@@ -470,7 +472,7 @@ audio{
 
     width:100%;
 
-    background:#fff;
+    background:var(--card);
 
     border-radius:16px;
 
@@ -555,7 +557,7 @@ audio{
 
     font-weight:500;
 
-    color:#8A8A8A;
+    color:var(--text-muted);
 
 }
 
@@ -580,7 +582,7 @@ audio{
 
     font-weight:700;
 
-    color:#3E3E3E;
+    color:var(--text);
 
     letter-spacing:.2px;
 
