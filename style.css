@@ -2,20 +2,80 @@
     box-sizing:border-box;
 }
 
+/*==================================================
+  BEATZ COLOR SYSTEM
+==================================================*/
+
+:root{
+
+    /* ---------- Fondo ---------- */
+
+    --bg:#F8F9FB;
+
+    /* ---------- Tarjetas ---------- */
+
+    --card:#FFFFFF;
+
+    /* ---------- Textos ---------- */
+
+    --text:#222222;
+
+    --text-secondary:#777777;
+	
+	--text-light:#FFFFFF;
+
+    /* ---------- Bordes ---------- */
+
+    --border:#E7EAF2;
+	
+	/* ---------- Componentes ---------- */
+
+	--mini-player:#FFFFFF;
+
+	--slider:#E6EEF8;
+
+    /* ---------- Sombras ---------- */
+
+    --shadow:
+        0 6px 16px rgba(0,0,0,.08);
+
+    --shadow-hover:
+        0 12px 28px rgba(0,0,0,.12);
+
+    /* ---------- Marca ---------- */
+
+    --cyan:#25C8F7;
+
+    --blue:#4B7BFF;
+
+    --purple:#8C52FF;
+
+    --pink:#FF4FA3;
+
+    /* ---------- Estado ---------- */
+
+    --live:#22C55E;
+
+    --paused:#F59E0B;
+
+    --stopped:#9CA3AF;
+
+}
+
 body{
 
     margin:0;
 
     padding-bottom:90px;
 
-    background:#F8F9FB;
+    background:var(--bg);
 
     font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    sans-serif;
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
 
-    color:#222;
+    color:var(--text);
 
 }
 
