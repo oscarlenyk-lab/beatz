@@ -235,6 +235,36 @@ function guardarUltimaRadio(nombre){
 
 }
 
+/*=========================================================
+  TEMA (LIGHT / DARK)
+=========================================================*/
+
+function aplicarTema(tema){
+
+    document.body.classList.toggle(
+        "dark",
+        tema==="dark"
+    );
+
+}
+
+function cambiarTema(){
+
+    const oscuro =
+        document.body.classList.contains(
+            "dark"
+        );
+
+    aplicarTema(
+
+        oscuro
+            ? "light"
+            : "dark"
+
+    );
+
+}
+
 
 /*=========================================================
   ESTADO DEL REPRODUCTOR
