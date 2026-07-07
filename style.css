@@ -39,6 +39,8 @@
 	/* ---------- Componentes ---------- */
 
 	--mini-player:#FFFFFF;
+	
+	--mini-player-bg:rgba(255,255,255,.92);	
 
 	--slider:#E6EEF8;
 
@@ -93,6 +95,8 @@ body.dark{
     /* Mini reproductor */
 
     --mini-player:#20242B;
+	
+	--mini-player-bg:rgba(28,31,38,.92);
 
     /* Texto */
 
@@ -1079,17 +1083,17 @@ audio{
     border-radius:24px;
 
     background:
-        linear-gradient(
-            rgba(255,255,255,.92),
-            rgba(255,255,255,.92)
-        ) padding-box,
+    linear-gradient(
+        var(--mini-player-bg),
+        var(--mini-player-bg)
+    ) padding-box,
 
-        linear-gradient(
-            135deg,
-            rgba(37,200,247,.20),
-            rgba(140,82,255,.20),
-            rgba(255,79,163,.20)
-        ) border-box;
+    linear-gradient(
+        135deg,
+        rgba(37,200,247,.20),
+        rgba(140,82,255,.20),
+        rgba(255,79,163,.20)
+    ) border-box;
 
     border:1px solid transparent;
 
