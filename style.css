@@ -147,6 +147,10 @@ body{
 
     color:var(--text);
 
+    transition:
+        background .30s ease,
+        color .30s ease;
+
 }
 
 .header{
@@ -290,6 +294,10 @@ body{
     0 0 24px rgba(255,79,163,.05);
 	
     overflow:hidden;
+	
+	transition:
+    background .30s ease,
+    box-shadow .30s ease;
 
 }
 
@@ -459,6 +467,11 @@ audio{
     cursor:pointer;
 
     transition:.25s;
+	
+	transition:
+    background .30s ease,
+    transform .25s ease,
+    box-shadow .25s ease;
 
 }
 
@@ -556,6 +569,11 @@ audio{
     transition:
         transform .22s ease,
         box-shadow .22s ease;
+		
+		transition:
+    background .30s ease,
+    transform .25s ease,
+    box-shadow .25s ease;
 
 }
 
@@ -1108,6 +1126,11 @@ audio{
         border-color .25s ease;
 
     z-index:9999;
+	
+	transition:
+    background .30s ease,
+    color .30s ease,
+    box-shadow .30s ease;
 
 }
 
