@@ -375,7 +375,7 @@ audio{
 
     gap:12px;
 
-    background:#FFFFFF;
+    background:var(--card);
 
     border-radius:16px;
 
@@ -422,7 +422,7 @@ audio{
 
     font-weight:700;
 
-    color:#222;
+    color:var(--text);
 
     line-height:1.2;
 
@@ -433,7 +433,7 @@ audio{
     border:2px solid transparent;
 
     background:
-        linear-gradient(#FFFFFF,#FFFFFF) padding-box,
+        linear-gradient(var(--card),var(--card)) padding-box,
 
         linear-gradient(
             90deg,
