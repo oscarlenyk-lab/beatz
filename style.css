@@ -1259,7 +1259,11 @@ audio{
 
     border-radius:999px;
 
-    background:#D8DEE8;
+    background:linear-gradient(
+    90deg,
+    rgba(37,200,247,.18),
+    rgba(140,82,255,.18)
+);
 
     cursor:pointer;
 
@@ -1268,6 +1272,7 @@ audio{
     transition:
         background .30s ease,
         box-shadow .30s ease;
+		border:1px solid rgba(140,82,255,.12);	
 
 }
 
@@ -1293,7 +1298,11 @@ audio{
 
 body.dark .theme-toggle{
 
-    background:#8C52FF;
+    background:linear-gradient(
+        135deg,
+        #4B7BFF,
+        #8C52FF
+    );
 
 }
 
