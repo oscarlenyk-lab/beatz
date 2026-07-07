@@ -70,6 +70,64 @@
 
 }
 
+:root{
+
+    ...
+
+}
+
+/*==================================================
+  DARK MODE
+==================================================*/
+
+body.dark{
+
+    /* Fondo principal */
+
+    --bg:#121417;
+
+    /* Tarjetas */
+
+    --card:#1C1F26;
+
+    /* Mini reproductor */
+
+    --mini-player:#20242B;
+
+    /* Texto */
+
+    --text:#F5F7FA;
+
+    --text-secondary:#C2C8D0;
+
+    --text-muted:#98A2B3;
+
+    /* Títulos */
+
+    --title:#D5DCE5;
+
+    /* Bordes */
+
+    --border:#2F3540;
+
+    /* Separadores */
+
+    --divider:#303743;
+
+    /* Slider */
+
+    --slider:#2D3440;
+
+    /* Sombras */
+
+    --shadow:
+        0 8px 22px rgba(0,0,0,.35);
+
+    --shadow-hover:
+        0 14px 34px rgba(0,0,0,.45);
+
+}
+
 body{
 
     margin:0;
@@ -269,7 +327,7 @@ body{
     transform .35s ease,
     box-shadow .35s ease;
 
-    background:white;
+    background:var(--card);
 
 }
 
@@ -701,7 +759,7 @@ audio{
 
     inset:0;
 
-    background:white;
+    background:var(--bg);
 
     z-index:9999;
 
