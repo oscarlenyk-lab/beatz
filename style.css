@@ -24,11 +24,17 @@
 	
 	--text-muted:#8A8A8A;
 	
+	/* ---------- Títulos ---------- */
+
+	--title:#5F6B7A;
+	
 	--text-light:#FFFFFF;
 
     /* ---------- Bordes ---------- */
 
     --border:#E7EAF2;
+	
+	--divider:#E9EEF4;
 	
 	/* ---------- Componentes ---------- */
 
@@ -744,7 +750,7 @@ audio{
 
     font-weight:600;
 
-    color:#5F6B7A;
+    color:var(--title);
 
     letter-spacing:.8px;
 
@@ -783,7 +789,7 @@ audio{
 
     height:1px;
 
-    background:#E9EEF4;
+    background:var(--divider);
 
 }
 
