@@ -71,7 +71,7 @@ const radios = [
     {
         nombre:"One World Radio",
         descripcion:"The Sound of Tomorrowland",
-        logo:"logos/oneworld.jpg",
+        logo:"logos/oneworld.png",
         stream:"https://playerservices.streamtheworld.com/api/livestream-redirect/OWR_INTERNATIONAL_ADP.m3u8"
     },
 
