@@ -56,7 +56,7 @@ const radios = [
 
     {
         nombre:"m2o Radio",
-        descripcion:"Italy's Dance Station",
+        descripcion:"Musica Allo Stato Puro",
         logo:"logos/m2o.png",
         stream:"https://streamcdnb3-4c4b867c89244861ac216426883d1ad0.msvdn.net/radiom2o/radiom2o/play1.m3u8"
     },
