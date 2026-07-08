@@ -227,6 +227,18 @@ body{
 
 }
 
+.brand-title{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:12px;
+
+}
+
 .tagline{
 
     margin-top:2px;
@@ -1249,9 +1261,9 @@ audio{
 
 .theme-toggle{
 
-    width:42px;
+    width:36px;
 
-    height:22px;
+    height:18px;
 
     padding:2px;
 
@@ -1259,11 +1271,7 @@ audio{
 
     border-radius:999px;
 
-    background:linear-gradient(
-    90deg,
-    rgba(37,200,247,.18),
-    rgba(140,82,255,.18)
-);
+    background:#D8DEE8;
 
     cursor:pointer;
 
@@ -1278,9 +1286,9 @@ audio{
 
 .theme-thumb{
 
-    width:18px;
+    width:14px;
 
-    height:18px;
+    height:14px;
 
     border-radius:50%;
 
@@ -1292,23 +1300,27 @@ audio{
         transform .30s ease;
 
     box-shadow:
-        0 2px 8px rgba(0,0,0,.18);
+        0 1px 4px rgba(0,0,0,.18);
 
 }
 
 body.dark .theme-toggle{
 
     background:linear-gradient(
+
         135deg,
+
         #4B7BFF,
+
         #8C52FF
+
     );
 
 }
 
 body.dark .theme-thumb{
 
-    transform:translateX(20px);
+    transform:translateX(18px);
 
 }
 
