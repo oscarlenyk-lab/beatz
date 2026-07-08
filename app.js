@@ -762,3 +762,9 @@ UI.miniPlay.addEventListener("click",()=>{
     }
 
 });
+
+UI.themeToggle.addEventListener("click",()=>{
+
+    cambiarTema();
+
+});
