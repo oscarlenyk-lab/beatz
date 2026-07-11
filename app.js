@@ -37,13 +37,17 @@ const CONFIG = {
 
 const App = {
 
-    radioActual: null,
+    radioActual:null,
 
-    hls: null,
+    hls:null,
 
-    tvHls: null,
+    tvHls:null,
 
-    estado: CONFIG.estadoInicial
+    estado:CONFIG.estadoInicial,
+
+    signalX:20,
+
+    signalAnimation:null
 
 };
 
@@ -184,6 +188,8 @@ const UI = {
     miniPlay: document.getElementById("miniPlay"),
 
 	themeToggle: document.getElementById("themeToggle")
+
+    signalPulse: document.querySelector(".signal-pulse"),
 
 };
 
