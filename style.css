@@ -1405,7 +1405,7 @@ body.dark .theme-thumb{
 
     top:50%;
 
-    left:-40px;
+    left:0;
 
     width:40px;
 
@@ -1418,15 +1418,15 @@ body.dark .theme-thumb{
     background:linear-gradient(
         90deg,
         rgba(37,200,247,0),
-        rgba(37,200,247,.40),
-        rgba(75,123,255,.75),
-        rgba(140,82,255,.75),
-        rgba(255,79,163,.40),
+        rgba(37,200,247,.45),
+        rgba(75,123,255,.85),
+        rgba(140,82,255,.85),
+        rgba(255,79,163,.45),
         rgba(255,79,163,0)
     );
 
     filter:blur(4px);
 
-    opacity:.95;
+    opacity:1;
 
 }
