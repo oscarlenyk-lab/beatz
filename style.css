@@ -1399,7 +1399,7 @@ body.dark .theme-thumb{
 
 }
 
-   .stream-glow{
+    .stream-glow{
 
     width:50px;
 
@@ -1421,5 +1421,51 @@ body.dark .theme-thumb{
         rgba(255,79,163,.20),
         rgba(255,79,163,0)
     );
+
+        animation:streamFlow 6s linear infinite;
+
+        will-change:left;
+        
+}
+
+    /*==================================================
+  STREAM GLOW ANIMATION
+==================================================*/
+
+@keyframes streamFlow{
+
+    0%{
+
+        left:-60px;
+
+        opacity:0;
+
+    }
+
+    8%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    92%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        left:calc(100% + 60px);
+
+        opacity:0;
+
+    }
 
 }
