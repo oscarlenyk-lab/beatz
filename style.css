@@ -1398,3 +1398,35 @@ body.dark .theme-thumb{
         );
 
 }
+
+    .stream-glow{
+
+    position:absolute;
+
+    top:50%;
+
+    left:-40px;
+
+    width:40px;
+
+    height:8px;
+
+    transform:translateY(-50%);
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        rgba(37,200,247,0),
+        rgba(37,200,247,.40),
+        rgba(75,123,255,.75),
+        rgba(140,82,255,.75),
+        rgba(255,79,163,.40),
+        rgba(255,79,163,0)
+    );
+
+    filter:blur(4px);
+
+    opacity:.95;
+
+}
