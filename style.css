@@ -1427,23 +1427,50 @@ body.dark .theme-thumb{
 
     background-size:220px 100%;
 
-    animation:
-        pulseLine 5s linear infinite;
+    animation:none;
 
 }
 
-    @keyframes pulseLine{
+  .stream-line::after{
 
-    from{
+    content:"";
 
-        background-position:-220px 0;
+    position:absolute;
 
-    }
+    top:50%;
 
-    to{
+    left:0;
 
-        background-position:220px 0;
+    width:60px;
 
-    }
+    height:8px;
 
-}
+    transform:translateY(-50%);
+
+    border-radius:999px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(37,200,247,.20),
+
+        rgba(75,123,255,.80),
+
+        rgba(140,82,255,1),
+
+        rgba(255,79,163,.80),
+
+        rgba(255,79,163,.20),
+
+        transparent
+
+    );
+
+    filter:blur(4px);
+
+    opacity:.95;
+
+}  
