@@ -1358,3 +1358,41 @@ body.dark .theme-thumb{
     background:rgba(255,255,255,.08);
 
 }
+
+    .signal-pulse{
+
+    position:absolute;
+
+    top:50%;
+
+    left:20px;
+
+    width:48px;
+
+    height:6px;
+
+    transform:translateY(-50%);
+
+    border-radius:999px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        var(--cyan),
+
+        var(--blue),
+
+        var(--purple),
+
+        transparent
+
+    );
+
+    filter:blur(3px);
+
+    opacity:.95;
+
+}
