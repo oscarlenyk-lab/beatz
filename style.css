@@ -1399,34 +1399,27 @@ body.dark .theme-thumb{
 
 }
 
-    .stream-glow{
+   .stream-glow{
 
-    position:absolute;
+    width:50px;
 
-    top:50%;
+    height:10px;
 
     left:0;
 
-    width:40px;
+    filter:blur(5px);
 
-    height:8px;
-
-    transform:translateY(-50%);
-
-    border-radius:999px;
+    opacity:1;
 
     background:linear-gradient(
         90deg,
         rgba(37,200,247,0),
-        rgba(37,200,247,.45),
-        rgba(75,123,255,.85),
-        rgba(140,82,255,.85),
-        rgba(255,79,163,.45),
+        rgba(37,200,247,.20),
+        rgba(75,123,255,.60),
+        rgba(140,82,255,1),
+        rgba(255,79,163,.60),
+        rgba(255,79,163,.20),
         rgba(255,79,163,0)
     );
-
-    filter:blur(4px);
-
-    opacity:1;
 
 }
