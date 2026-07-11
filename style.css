@@ -1335,48 +1335,15 @@ body.dark .theme-thumb{
  STREAM FLOW
 ==================================================*/
 
-.stream-flow{
+.signal-flow{
 
     width:100%;
 
-    margin-top:8px;
+    margin-top:10px;
 
 }
 
-.stream-status{
-
-    display:none;
-
-}
-
-.stream-dot{
-
-    width:8px;
-
-    height:8px;
-
-    border-radius:50%;
-
-    background:var(--live);
-
-    box-shadow:
-        0 0 10px rgba(34,197,94,.45);
-
-}
-
-.stream-text{
-
-    font-size:12px;
-
-    font-weight:700;
-
-    letter-spacing:.6px;
-
-    color:var(--text-secondary);
-
-}
-
-.stream-line{
+.signal-line{
 
     position:relative;
 
@@ -1388,89 +1355,6 @@ body.dark .theme-thumb{
 
     overflow:hidden;
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,.04),
-            rgba(255,255,255,.04)
-        );
+    background:rgba(255,255,255,.08);
 
 }
-
-.stream-line::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-        linear-gradient(
-            90deg,
-
-            transparent 0%,
-
-            rgba(37,200,247,.15) 15%,
-
-            rgba(75,123,255,.45) 35%,
-
-            rgba(140,82,255,.75) 50%,
-
-            rgba(255,79,163,.45) 65%,
-
-            rgba(37,200,247,.15) 85%,
-
-            transparent 100%
-
-        );
-
-    background-size:220px 100%;
-
-    animation:none;
-
-}
-
-  .stream-line::after{
-
-    content:"";
-
-    position:absolute;
-
-    top:50%;
-
-    left:20;
-
-    width:60px;
-
-    height:6px;
-
-    transform:translateX(-50%);
-
-    border-radius:999px;
-
-    background:linear-gradient(
-
-        90deg,
-
-        transparent,
-
-        rgba(37,200,247,.20),
-
-        rgba(75,123,255,.80),
-
-        rgba(140,82,255,1),
-
-        rgba(255,79,163,.80),
-
-        rgba(255,79,163,.20),
-
-        transparent
-
-    );
-
-    filter:blur(3px);
-
-    opacity:.95;
-
-}  
