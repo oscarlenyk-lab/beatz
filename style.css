@@ -1439,13 +1439,13 @@ body.dark .theme-thumb{
 
     top:50%;
 
-    left:0;
+    left:20;
 
     width:60px;
 
-    height:8px;
+    height:6px;
 
-    transform:translateY(-50%);
+    transform:translateX(-50%);
 
     border-radius:999px;
 
@@ -1469,7 +1469,7 @@ body.dark .theme-thumb{
 
     );
 
-    filter:blur(4px);
+    filter:blur(3px);
 
     opacity:.95;
 
