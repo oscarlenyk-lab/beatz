@@ -187,7 +187,7 @@ const UI = {
 
     miniPlay: document.getElementById("miniPlay"),
 
-	themeToggle: document.getElementById("themeToggle")
+	themeToggle: document.getElementById("themeToggle"),
 
     signalPulse: document.querySelector(".signal-pulse"),
 
