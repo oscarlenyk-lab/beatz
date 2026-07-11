@@ -1391,87 +1391,58 @@ body.dark .theme-thumb{
     background:
         linear-gradient(
             90deg,
-            rgba(37,200,247,.14),
-            rgba(75,123,255,.14),
-            rgba(140,82,255,.14),
-            rgba(255,79,163,.14)
+            rgba(255,255,255,.04),
+            rgba(255,255,255,.04)
         );
 
 }
 
-    .stream-glow{
+.stream-line::before{
+
+    content:"";
 
     position:absolute;
 
-    top:50%;
+    inset:0;
 
-    left:0;
+    background:
+        linear-gradient(
+            90deg,
 
-    width:50px;
+            transparent 0%,
 
-    height:10px;
+            rgba(37,200,247,.15) 15%,
 
-    border-radius:999px;
+            rgba(75,123,255,.45) 35%,
 
-    background:linear-gradient(
-        90deg,
-        rgba(37,200,247,0),
-        rgba(37,200,247,.20),
-        rgba(75,123,255,.60),
-        rgba(140,82,255,1),
-        rgba(255,79,163,.60),
-        rgba(255,79,163,.20),
-        rgba(255,79,163,0)
-    );
+            rgba(140,82,255,.75) 50%,
 
-    filter:blur(5px);
+            rgba(255,79,163,.45) 65%,
 
-    transform:
-        translateX(-60px)
-        translateY(-50%);
+            rgba(37,200,247,.15) 85%,
+
+            transparent 100%
+
+        );
+
+    background-size:220px 100%;
 
     animation:
-        streamFlow 6s linear infinite;
-
-    will-change:transform;
+        pulseLine 5s linear infinite;
 
 }
 
-    /*==================================================
-  STREAM GLOW ANIMATION
-==================================================*/
+    @keyframes pulseLine{
 
-@keyframes streamFlow{
+    from{
 
-    0%{
-
-        transform:
-            translateX(-60px)
-            translateY(-50%);
-
-        opacity:0;
+        background-position:-220px 0;
 
     }
 
-    8%{
+    to{
 
-        opacity:1;
-
-    }
-
-    92%{
-
-        opacity:1;
-
-    }
-
-    100%{
-
-        transform:
-            translateX(calc(100% + 60px))
-            translateY(-50%);
-
-        opacity:0;
+        background-position:220px 0;
 
     }
 
