@@ -747,9 +747,7 @@ if(ultimaRadio){
 
     actualizarEstado(CONFIG.estadoInicial);
 
-    UI.miniPlay.innerHTML = ICON_PLAY;
-
-);
+UI.miniPlay.innerHTML = ICON_PLAY;
 
 UI.miniPlay.addEventListener("click",()=>{
 
