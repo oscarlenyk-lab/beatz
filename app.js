@@ -292,23 +292,31 @@ function actualizarEstado(estado){
             UI.playStatus.textContent = "LIVE";
 
             UI.playStatus.style.color =
-            CONFIG.colores.live;
+                CONFIG.colores.live;
 
             UI.liveDot.style.background =
-            CONFIG.colores.live;
+                CONFIG.colores.live;
 
             UI.liveDot.style.boxShadow =
-            "0 0 8px rgba(34,197,94,.55)";
+                "0 0 8px rgba(34,197,94,.55)";
 
             UI.liveDot.style.animation =
-            "livePulse 1.8s infinite";
+                "livePulse 1.8s infinite";
 
             UI.equalizer.classList.remove("paused");
 
             UI.logo.classList.add("reproduciendo");
 
-            UI.signalPulse.style.animationPlayState = "running";
-            
+            /* ---------- Signal Flow ---------- */
+
+            UI.signalPulse.style.display = "block";
+
+            // Reinicia la animación desde el inicio
+            UI.signalPulse.style.animation = "none";
+            UI.signalPulse.offsetHeight; // fuerza reflow
+            UI.signalPulse.style.animation =
+                "signalFlow 3.2s linear infinite";
+
             break;
 
 
@@ -318,22 +326,24 @@ function actualizarEstado(estado){
             UI.playStatus.textContent = "PAUSED";
 
             UI.playStatus.style.color =
-            CONFIG.colores.paused;
+                CONFIG.colores.paused;
 
             UI.liveDot.style.background =
-            CONFIG.colores.paused;
+                CONFIG.colores.paused;
 
             UI.liveDot.style.boxShadow =
-            "0 0 8px rgba(245,158,11,.55)";
+                "0 0 8px rgba(245,158,11,.55)";
 
-            UI.liveDot.style.animation =
-            "none";
+            UI.liveDot.style.animation = "none";
 
             UI.equalizer.classList.add("paused");
 
             UI.logo.classList.remove("reproduciendo");
 
-            UI.signalPulse.style.animationPlayState = "paused";
+            /* ---------- Signal Flow ---------- */
+
+            UI.signalPulse.style.animationPlayState =
+                "paused";
 
             break;
 
@@ -344,20 +354,25 @@ function actualizarEstado(estado){
             UI.playStatus.textContent = "STOPPED";
 
             UI.playStatus.style.color =
-            CONFIG.colores.stopped;
+                CONFIG.colores.stopped;
 
             UI.liveDot.style.background =
-            CONFIG.colores.stopped;
+                CONFIG.colores.stopped;
 
             UI.liveDot.style.boxShadow =
-            "0 0 8px rgba(156,163,175,.45)";
+                "0 0 8px rgba(156,163,175,.45)";
 
-            UI.liveDot.style.animation =
-            "none";
+            UI.liveDot.style.animation = "none";
 
             UI.equalizer.classList.add("paused");
 
             UI.logo.classList.remove("reproduciendo");
+
+            /* ---------- Signal Flow ---------- */
+
+            UI.signalPulse.style.animation = "none";
+
+            UI.signalPulse.style.display = "none";
 
             break;
 
@@ -607,6 +622,8 @@ UI.player.addEventListener("play",()=>{
     actualizarEstado("LIVE");
 
     UI.miniPlay.innerHTML = "❚❚";
+
+    UI.signalPulse.style.display = "block";
 
 });
 
