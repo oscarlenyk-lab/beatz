@@ -747,7 +747,7 @@ if(ultimaRadio){
 
 actualizarEstado(
 
-    CONFIG.estadoInicial;
+    CONFIG.estadoInicial
 
     UI.miniPlay.innerHTML = ICON_PLAY;
 
