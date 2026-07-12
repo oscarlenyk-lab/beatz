@@ -1367,9 +1367,9 @@ body.dark .theme-thumb{
 
     left:20px;
 
-    width:48px;
+    width:120px
 
-    height:6px;
+    height:2px;
 
     transform:translateY(-50%);
 
@@ -1391,9 +1391,9 @@ body.dark .theme-thumb{
 
     );
 
-    filter:blur(3px);
+    filter:blur(2px);
 
-    opacity:.95;
+    opacity:.75;
 
     animation:signalFlow 4s linear infinite;
 
