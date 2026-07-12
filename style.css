@@ -1307,6 +1307,8 @@ body.dark .theme-thumb{
 
     top:50%;
 
+    margin-top:-1px;
+
     left:-140px;
 
     width:140px;
@@ -1337,9 +1339,7 @@ body.dark .theme-thumb{
 
     opacity:.85;
 
-    animation:signalFlow 4s linear infinite;
-
-    animation-play-state:paused;
+    display:none;
 
 }
 
@@ -1347,20 +1347,19 @@ body.dark .theme-thumb{
 
     0%{
 
-        transform:
-            translate(0,-50%);
+        left:-140px;
 
         opacity:0;
 
     }
 
-    10%{
+    8%{
 
         opacity:1;
 
     }
 
-    90%{
+    92%{
 
         opacity:1;
 
@@ -1368,8 +1367,7 @@ body.dark .theme-thumb{
 
     100%{
 
-        transform:
-            translate(calc(100vw - 120px),-50%);
+        left:100%;
 
         opacity:0;
 
