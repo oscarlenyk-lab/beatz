@@ -315,7 +315,7 @@ function actualizarEstado(estado){
             UI.signalPulse.style.animation = "none";
             UI.signalPulse.offsetHeight; // fuerza reflow
             UI.signalPulse.style.animation =
-                "signalFlow 3.2s linear infinite";
+                "signalFlow 4.5s linear infinite";
 
             break;
 
