@@ -1321,19 +1321,21 @@ body.dark .theme-thumb{
 
     background:linear-gradient(
 
-        90deg,
+    90deg,
 
-        transparent,
+    transparent 0%,
 
-        var(--cyan),
+    var(--cyan) 20%,
 
-        var(--blue),
+    var(--blue) 45%,
 
-        var(--purple),
+    var(--purple) 70%,
 
-        transparent
+    var(--pink) 88%,
 
-    );
+    transparent 100%
+
+);
 
     filter:blur(1px);
 
