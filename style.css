@@ -1383,9 +1383,9 @@ body.dark .theme-thumb{
 
     top:50%;
 
-    left:140px;
+    left:-140px;
 
-    width:140px
+    width:140px;
 
     height:3px;
 
@@ -1409,13 +1409,13 @@ body.dark .theme-thumb{
 
     );
 
-    filter:blur(1x);
+    filter:blur(1px);
 
     opacity:.85;
 
     animation:signalFlow 4s linear infinite;
 
-    animation-play-state:paused;
+    animation-play-state:running;
 
 }
 
