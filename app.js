@@ -171,8 +171,6 @@ const UI = {
 
     equalizer: document.querySelector(".equalizer"),
 
-    volume: document.getElementById("volumeSlider"),
-
     radios: document.getElementById("radios"),
 
     tvs: document.getElementById("tvs"),
@@ -308,6 +306,8 @@ function actualizarEstado(estado){
             UI.equalizer.classList.remove("paused");
 
             UI.logo.classList.add("reproduciendo");
+
+            UI.signalPulse.style.animationPlayState = "running";
             
             break;
 
@@ -332,6 +332,8 @@ function actualizarEstado(estado){
             UI.equalizer.classList.add("paused");
 
             UI.logo.classList.remove("reproduciendo");
+
+            UI.signalPulse.style.animationPlayState = "paused";
 
             break;
 
@@ -623,59 +625,6 @@ UI.player.addEventListener("ended",()=>{
     UI.miniPlay.innerHTML = "▶";
 
 });
-
-
-/*=========================================================
-  CONTROL DE VOLUMEN
-=========================================================*/
-
-const volumenGuardado =
-localStorage.getItem("volumen");
-
-if(volumenGuardado){
-
-    UI.volume.value = volumenGuardado;
-
-    UI.player.volume =
-    volumenGuardado/100;
-
-    UI.tvPlayer.volume =
-    volumenGuardado/100;
-
-}else{
-
-    UI.volume.value =
-    CONFIG.volumenInicial*100;
-
-    UI.player.volume =
-    CONFIG.volumenInicial;
-
-    UI.tvPlayer.volume =
-    CONFIG.volumenInicial;
-
-}
-
-UI.volume.addEventListener("input",()=>{
-
-    const volumen =
-    UI.volume.value;
-
-    UI.player.volume =
-    volumen/100;
-
-    UI.tvPlayer.volume =
-    volumen/100;
-
-    localStorage.setItem(
-
-        "volumen",
-
-        volumen
-
-    );
-
-});
-
 
 /*=========================================================
   PANTALLA COMPLETA
