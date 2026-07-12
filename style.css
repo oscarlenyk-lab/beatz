@@ -885,83 +885,7 @@ audio{
 
 }
 
-.volume-control{
 
-    width:100%;
-
-    margin-top:18px;
-
-    padding:0 22px 12px;
-
-}
-
-#volumeSlider{
-
-    width:100%;
-
-    height:6px;
-
-    appearance:none;
-
-    -webkit-appearance:none;
-
-    background:var(--slider);
-
-    border-radius:20px;
-
-    outline:none;
-
-    cursor:pointer;
-
-}
-
-#volumeSlider::-webkit-slider-thumb{
-
-    appearance:none;
-    -webkit-appearance:none;
-
-    width:16px;
-    height:16px;
-
-    border-radius:50%;
-
-    background:
-    linear-gradient(
-        135deg,
-        #25C8F7,
-        #4B7BFF,
-        #8C52FF,
-        #FF4FA3
-    );
-
-    border:3px solid var(--card);
-
-    cursor:pointer;
-
-    box-shadow:
-        0 4px 12px rgba(75,123,255,.20);
-
-}
-
-#volumeSlider:hover::-webkit-slider-thumb{
-
-    transform:scale(1.25);
-
-}
-
-#volumeSlider::-moz-range-thumb{
-
-    width:22px;
-
-    height:22px;
-
-    border-radius:50%;
-
-    border:3px solid var(--card);
-
-    background:#8C52FF;
-
-}
 
 .youtube-link{
 
@@ -1415,7 +1339,7 @@ body.dark .theme-thumb{
 
     animation:signalFlow 4s linear infinite;
 
-    animation-play-state:running;
+    animation-play-state:paused;
 
 }
 
