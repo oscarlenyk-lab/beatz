@@ -32,6 +32,42 @@ const CONFIG = {
 
 
 /*=========================================================
+  ICONOS
+=========================================================*/
+
+const ICON_PLAY = `
+<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+    <polygon
+        points="9,7 18,12 9,17"
+        fill="white">
+    </polygon>
+</svg>
+`;
+
+const ICON_PAUSE = `
+<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+    <rect
+        x="8"
+        y="6"
+        width="2.4"
+        height="12"
+        rx="1.2"
+        fill="white">
+    </rect>
+
+    <rect
+        x="13.6"
+        y="6"
+        width="2.4"
+        height="12"
+        rx="1.2"
+        fill="white">
+    </rect>
+</svg>
+`;
+
+
+/*=========================================================
   ESTADO DE LA APLICACIÓN
 =========================================================*/
 
@@ -621,9 +657,7 @@ UI.player.addEventListener("play",()=>{
 
     actualizarEstado("LIVE");
 
-    UI.miniPlay.innerHTML = "❚❚";
-
-    UI.signalPulse.style.display = "block";
+    UI.miniPlay.innerHTML = ICON_PAUSE;
 
 });
 
@@ -631,7 +665,7 @@ UI.player.addEventListener("pause",()=>{
 
     actualizarEstado("STOPPED");
 
-    UI.miniPlay.innerHTML = "▶";
+    UI.miniPlay.innerHTML = ICON_PLAY;
 
 });
 
@@ -639,7 +673,7 @@ UI.player.addEventListener("ended",()=>{
 
     actualizarEstado("STOPPED");
 
-    UI.miniPlay.innerHTML = "▶";
+    UI.miniPlay.innerHTML = ICON_PLAY;
 
 });
 
@@ -713,7 +747,9 @@ if(ultimaRadio){
 
 actualizarEstado(
 
-    CONFIG.estadoInicial
+    CONFIG.estadoInicial;
+
+    UI.miniPlay.innerHTML = ICON_PLAY;
 
 );
 
