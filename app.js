@@ -663,7 +663,7 @@ UI.player.addEventListener("play",()=>{
 
 UI.player.addEventListener("pause",()=>{
 
-    actualizarEstado("STOPPED");
+    actualizarEstado("PAUSED");
 
     UI.miniPlay.innerHTML = ICON_PLAY;
 
@@ -745,9 +745,7 @@ if(ultimaRadio){
 
 }
 
-actualizarEstado(
-
-    CONFIG.estadoInicial
+    actualizarEstado(CONFIG.estadoInicial);
 
     UI.miniPlay.innerHTML = ICON_PLAY;
 
