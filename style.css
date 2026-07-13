@@ -1193,9 +1193,9 @@ audio{
 
     position:absolute;
 
-    top:18px;
+    top:14px;
 
-    right:18px;
+    right:14px;
 
     z-index:20;
 
@@ -1203,9 +1203,9 @@ audio{
 
 .theme-toggle{
 
-    width:34px;
+    width:28px;
 
-    height:34px;
+    height:28px;
 
     border:none;
 
@@ -1219,31 +1219,42 @@ audio{
 
     cursor:pointer;
 
-    background:linear-gradient(
-        135deg,
-        var(--blue),
-        var(--purple),
-        var(--pink)
-    );
+    background:rgba(255,255,255,.14);
 
-    color:white;
+	backdrop-filter:blur(14px);
 
-    font-size:18px;
+	-webkit-backdrop-filter:blur(14px);
+
+	border:1px solid rgba(255,255,255,.12);
+
+    color:#ffffff;
+	
+	text-shadow:
+    0 0 8px rgba(255,255,255,.18);
+
+    font-size:15px;
 
     box-shadow:
-        0 6px 18px rgba(0,0,0,.18),
-        0 0 10px rgba(140,82,255,.18);
+
+    0 3px 8px rgba(0,0,0,.14),
+
+    0 0 5px rgba(255,255,255,.05);
 
     transition:
-        transform .35s ease,
-        box-shadow .35s ease,
-        background .35s ease;
+    transform .35s ease,
+    box-shadow .35s ease,
+    background .35s ease,
+    opacity .35s ease;
+	
+	opacity:.90;
 
 }
 
 .theme-toggle:hover{
 
-    transform:scale(1.08);
+    transform:scale(1.04);
+
+    opacity:1;
 
 }
 
