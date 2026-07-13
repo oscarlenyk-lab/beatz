@@ -272,6 +272,20 @@ body{
     padding:16px 12px;
 }
 
+/*==================================================
+  CONTENT SECTIONS
+==================================================*/
+
+.content-section{
+
+    max-width:600px;
+
+    margin:0 auto;
+
+    padding:0 12px;
+
+}
+
 .player-card{
 
     width:100%;
@@ -445,7 +459,7 @@ audio{
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:10px;
+    gap:12px;
 
     margin-top:16px;
 
