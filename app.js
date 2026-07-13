@@ -36,10 +36,10 @@ const CONFIG = {
 =========================================================*/
 
 const ICON_PLAY = `
-<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
 
     <polygon
-        points="8.5,6.5 18.5,12 8.5,17.5"
+        points="8,6.2 18.5,12 8,17.8"
         fill="white">
     </polygon>
 
@@ -47,23 +47,23 @@ const ICON_PLAY = `
 `;
 
 const ICON_PAUSE = `
-<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
 
     <rect
-        x="7.8"
-        y="5.5"
-        width="2.8"
-        height="13"
-        rx="1.4"
+        x="7.4"
+        y="5.4"
+        width="2.6"
+        height="13.2"
+        rx="1.3"
         fill="white">
     </rect>
 
     <rect
-        x="13.4"
-        y="5.5"
-        width="2.8"
-        height="13"
-        rx="1.4"
+        x="14"
+        y="5.4"
+        width="2.6"
+        height="13.2"
+        rx="1.3"
         fill="white">
     </rect>
 
