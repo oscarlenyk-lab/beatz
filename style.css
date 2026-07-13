@@ -269,7 +269,7 @@ body{
 
     margin:0 auto;
 
-    padding:20px;
+    padding:16px 12px;
 }
 
 .player-card{
@@ -291,7 +291,7 @@ body{
 
     border-radius:32px;
 
-    padding:22px;
+    padding:20px;
 
     display:flex;
 
