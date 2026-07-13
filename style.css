@@ -168,6 +168,10 @@ body{
 
     text-align:center;
 
+    position:relative;
+
+    overflow:hidden;
+
 }
 
 .header h1{
@@ -233,9 +237,7 @@ body{
 
     align-items:center;
 
-    justify-content:space-between;
-
-    gap:12px;
+    justify-content:center;
 
 }
 
@@ -1189,7 +1191,13 @@ audio{
 
 .theme-button{
 
-    margin-left:auto;
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    z-index:20;
 
 }
 
