@@ -192,9 +192,9 @@ const tvs = [
 	},
 
 	{
-    nombre:"Music Box Polska Ukraine",
-    logo:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Music_Box_UA_%282018%29.svg/960px-Music_Box_UA_%282018%29.svg.png",
-    stream:"https://beatz-musicbox-proxy.oscarlenyk.workers.dev/mbpolskaukraine"
+    	nombre:"Music Box Polska Ukraine",
+    	logo:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Music_Box_UA_%282018%29.svg/960px-Music_Box_UA_%282018%29.svg.png",
+    	stream:"https://beatz-musicbox-proxy.oscarlenyk.workers.dev/mbpolskaukraine"
 	},
 
 	{
