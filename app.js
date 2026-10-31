@@ -192,6 +192,12 @@ const tvs = [
 	},
 
 	{
+    nombre:"Music Box Polska Ukraine",
+    logo:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Music_Box_UA_%282018%29.svg/960px-Music_Box_UA_%282018%29.svg.png",
+    stream:"https://beatz-musicbox-proxy.oscarlenyk.workers.dev/mbpolskaukraine"
+	},
+
+	{
         nombre:"That's 90s 00s",
     	logo:"logos/thats-90s00s.png",
     	stream:"https://amg01076-amg01076c19-rakuten-gb-8653.playouts.now.amagi.tv/playlist/amg01076-lightning-now90s00s-rakutengb/playlist.m3u8"
