@@ -193,7 +193,7 @@ const tvs = [
 
 	{
     	nombre:"Music Box Polska Ukraine",
-    	logo:""logos/musicbox.png",
+    	logo:"logos/musicbox.png",
     	stream:"https://beatz-musicbox-proxy.oscarlenyk.workers.dev/mbpolskaukraine"
 	},
 
