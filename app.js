@@ -225,10 +225,10 @@ const tvs = [
     },
 
 	{
-        nombre:"M2",
-    	logo:"logos/M2.png",
-    	stream:"http://88.212.7.14/live/m2_hun/index.m3u8"
-    },
+ 		nombre: "M2 Ukraine",
+  		logo:"logos/M2.png",
+  		stream: "https://beatz-musicbox-proxy.oscarlenyk.workers.dev/m2ukraine"
+},
 
 	{
 		nombre:"Dance TV",
