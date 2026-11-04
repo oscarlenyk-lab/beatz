@@ -125,7 +125,28 @@ const radios = [
         logo:"logos/ibiza.png",
         stream:"https://cdn-peer022.streaming-pro.com:8024/ibizaglobalradio.mp3"
     },
-	
+
+	{
+    	nombre:"90s90s Dance",
+    	descripcion:"The Sound of the 90s",
+    	logo:"logos/90s90s.png",
+    	stream:"https://streams.90s90s.de/danceradio/mp3-128/streams.90s90s.de/"
+	},
+
+	{
+    	nombre:"80s80s Radio",
+    	descripcion:"The Best of the 80s",
+    	logo:"logos/80s80s.png",
+    	stream:"https://streams.80s80s.de/web/mp3-128/streams.80s80s.de/"
+	},
+
+	{
+    	nombre:"Heart Dance",
+    	descripcion:"Non-Stop Dance Anthems",
+    	logo:"logos/heartdance.png",
+    	stream:"https://media-ssl.musicradio.com/HeartDanceMP3"
+	},
+		
 	{
     	nombre:"Aura FM",
     	descripcion:"La energía que suena!",
