@@ -225,6 +225,12 @@ const tvs = [
     },
 
 	{
+        nombre:"M2",
+    	logo:"logos/M2.png",
+    	stream:"http://88.212.7.14/live/m2_hun/index.m3u8"
+    },
+
+	{
 		nombre:"Dance TV",
 		logo:"logos/dancetv.png",
     	stream:"https://m1b2.worldcast.tv/dancetelevisionone/2/dancetelevisionone.m3u8"
