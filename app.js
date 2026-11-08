@@ -148,7 +148,7 @@ const radios = [
 	},
 
 	{
-  		nombre: "TRANCE 21",
+  		nombre: "Trance 21",
   		logo: "logos/trance21.png",
   		stream: "https://mscp3.live-streams.nl:8022/radio"
 	},
