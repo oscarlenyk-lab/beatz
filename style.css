@@ -1416,3 +1416,143 @@ body.dark #themeIcon{
     }
 
 }
+
+/*==================================================
+  BEATZ - MINI PLAYER + NAVEGACIÓN INFERIOR
+  Diseño inspirado en Spotify; conserva ambos players.
+==================================================*/
+
+:root {
+    --bottom-nav-height: 68px;
+}
+
+body {
+    padding-bottom: calc(160px + env(safe-area-inset-bottom));
+}
+
+.mini-player {
+    bottom: calc(var(--bottom-nav-height) + 12px + env(safe-area-inset-bottom));
+    min-height: 64px;
+    height: 64px;
+    left: 16px;
+    right: 16px;
+    z-index: 10001;
+}
+
+.bottom-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: var(--bottom-nav-height);
+    padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    background: rgba(12, 13, 15, .96);
+    border-top: 1px solid rgba(255,255,255,.08);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    z-index: 10000;
+}
+
+.nav-item {
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    color: #A7A7A7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 2px 4px;
+    font: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color .2s ease, transform .2s ease;
+}
+
+.nav-item .nav-icon {
+    font-size: 25px;
+    line-height: 1.1;
+    font-weight: 400;
+}
+
+.nav-item.activa {
+    color: #FFFFFF;
+}
+
+.nav-item:active {
+    transform: scale(.94);
+}
+
+@media (min-width: 700px) {
+    .bottom-nav {
+        left: 50%;
+        right: auto;
+        width: min(100%, 600px);
+        transform: translateX(-50%);
+        border-left: 1px solid rgba(255,255,255,.08);
+        border-right: 1px solid rgba(255,255,255,.08);
+        border-radius: 18px 18px 0 0;
+    }
+
+    .mini-player {
+        width: min(calc(100% - 32px), 568px);
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+    .mini-player:hover {
+        transform: translate(-50%, -2px);
+    }
+}
+
+@media (max-width: 380px) {
+    .mini-player {
+        left: 10px;
+        right: 10px;
+        padding: 7px 10px;
+    }
+
+    .mini-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .mini-title {
+        font-size: 14px;
+    }
+
+    .mini-subtitle {
+        font-size: 10px;
+    }
+
+    .mini-play {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* Ajustes finales Beatz: mini reproductor y barra inferior */
+:root { --bottom-nav-height: 76px; }
+
+body { padding-bottom: calc(170px + env(safe-area-inset-bottom)); }
+
+.mini-player {
+    bottom: calc(var(--bottom-nav-height) + 12px + env(safe-area-inset-bottom));
+}
+
+.bottom-nav { min-height: var(--bottom-nav-height); }
+
+#tvPlayer { background: #000; }
+
+.content-section, .player-section { scroll-margin-top: 18px; }
+
+@media (max-width: 480px) {
+    .mini-player { left: 12px; right: 12px; }
+}
