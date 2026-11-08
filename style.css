@@ -1556,3 +1556,71 @@ body { padding-bottom: calc(170px + env(safe-area-inset-bottom)); }
 @media (max-width: 480px) {
     .mini-player { left: 12px; right: 12px; }
 }
+
+
+/*==================================================
+  BEATZ - AJUSTE FINAL DE ESPACIO INFERIOR
+==================================================*/
+
+:root {
+    --bottom-nav-height: 76px;
+    --mini-player-height: 64px;
+    --mini-player-gap: 12px;
+}
+
+/* Espacio para poder desplazar el contenido por
+   encima del mini reproductor y la navegación */
+body {
+    padding-bottom: calc(230px + env(safe-area-inset-bottom));
+}
+
+/* Mini reproductor */
+.mini-player {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: calc(
+        var(--bottom-nav-height) +
+        var(--mini-player-gap) +
+        env(safe-area-inset-bottom)
+    );
+    height: var(--mini-player-height);
+    min-height: var(--mini-player-height);
+    z-index: 10001;
+}
+
+/* Navegación inferior */
+.bottom-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: var(--bottom-nav-height);
+    z-index: 10000;
+}
+
+/* Evitar que las secciones queden pegadas
+   al borde al navegar */
+.player-section,
+.content-section {
+    scroll-margin-top: 18px;
+}
+
+/* Fondo del reproductor de televisión */
+#tvPlayer {
+    background: #000;
+}
+
+@media (min-width: 700px) {
+    .mini-player {
+        width: min(calc(100% - 32px), 568px);
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+    .mini-player:hover {
+        transform: translate(-50%, -2px);
+    }
+}
+
