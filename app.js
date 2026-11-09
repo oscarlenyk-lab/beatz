@@ -828,70 +828,83 @@ function crearTarjetaShow(show) {
   EVENTOS DE REPRODUCCIÓN
 =========================================================*/
 
+
+/*=========================================================
+  EVENTOS DE REPRODUCCIÓN
+=========================================================*/
+
+// RADIO: comienza a reproducirse
 UI.player.addEventListener("play", () => {
 
+    if (App.medioActual !== "radio") return;
+
     actualizarEstado("LIVE");
+    actualizarIconoNav("radio");
 
     UI.miniPlay.innerHTML = ICON_PAUSE;
 
 });
 
-
+// RADIO: pausa
 UI.player.addEventListener("pause", () => {
 
-    if (App.medioActual === "radio") {
+    if (App.medioActual !== "radio") return;
 
-        actualizarEstado("PAUSED");
-
-    }
-
-    if (App.medioActual !== "tv") {
-
-        UI.miniPlay.innerHTML = ICON_PLAY;
-
-    }
-
-});
-
-
-UI.player.addEventListener("ended", () => {
-
-    actualizarEstado("STOPPED");
+    actualizarEstado("PAUSED");
+    actualizarIconoNav(null);
 
     UI.miniPlay.innerHTML = ICON_PLAY;
 
 });
 
+// RADIO: termina
+UI.player.addEventListener("ended", () => {
 
+    if (App.medioActual !== "radio") return;
+
+    actualizarEstado("STOPPED");
+    actualizarIconoNav(null);
+
+    UI.miniPlay.innerHTML = ICON_PLAY;
+
+});
+
+// TV: comienza a reproducirse
 UI.tvPlayer.addEventListener("play", () => {
 
+    if (App.medioActual !== "tv") return;
+
     actualizarEstado("LIVE");
+    actualizarIconoNav("tv");
 
     UI.miniPlay.innerHTML = ICON_PAUSE;
 
 });
 
-
+// TV: pausa
 UI.tvPlayer.addEventListener("pause", () => {
 
-    if (App.medioActual === "tv") {
+    if (App.medioActual !== "tv") return;
 
-        actualizarEstado("PAUSED");
-
-    }
+    actualizarEstado("PAUSED");
+    actualizarIconoNav(null);
 
     UI.miniPlay.innerHTML = ICON_PLAY;
 
 });
 
-
+// TV: termina
 UI.tvPlayer.addEventListener("ended", () => {
 
+    if (App.medioActual !== "tv") return;
+
     actualizarEstado("STOPPED");
+    actualizarIconoNav(null);
 
     UI.miniPlay.innerHTML = ICON_PLAY;
 
 });
+
 
 
 /*=========================================================
