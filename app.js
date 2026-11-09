@@ -189,7 +189,7 @@ const tvs = [
 
     {
         nombre: "Music Box",
-        logo: "logos/Musicbox.png",
+        logo: "logos/musicbox.png",
         stream: "https://beatz-musicbox-proxy.oscarlenyk.workers.dev/mbpolskaukraine"
     },
 
