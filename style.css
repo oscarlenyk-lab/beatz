@@ -1381,7 +1381,7 @@ body.dark #themeIcon{
 
     opacity:.85;
 
-	animation:signalFlow 3s linear infinite;
+	animation:signalFlow 5s linear infinite;
 
     display:none;
 
