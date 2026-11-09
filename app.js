@@ -188,6 +188,12 @@ const tvs = [
     },
 
     {
+        nombre: "Music Box",
+        logo: "logos/Musicbox.png",
+        stream: "https://beatz-musicbox-proxy.oscarlenyk.workers.dev/mbpolskaukraine"
+    },
+
+    {
         nombre: "Music Box Classic",
         logo: "logos/musicboxclassic.png",
         stream: "https://beatz-musicbox-proxy.oscarlenyk.workers.dev/mbclassic"
@@ -209,12 +215,6 @@ const tvs = [
         nombre: "Music Box Sexy",
         logo: "logos/musicboxsexy.png",
         stream: "https://beatz-musicbox-proxy.oscarlenyk.workers.dev/mbsexy"
-    },
-
-    {
-        nombre: "Music Box Polska Ukraine",
-        logo: "logos/Musicbox.png",
-        stream: "https://beatz-musicbox-proxy.oscarlenyk.workers.dev/mbpolskaukraine"
     },
 
     {
