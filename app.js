@@ -953,6 +953,32 @@ UI.logo.addEventListener("click", () => {
 
 
 /*=========================================================
+  BLOQUES DESPLEGABLES: RADIO, TV Y BIBLIOTECA
+=========================================================*/
+
+function alternarSeccion(boton, abrir) {
+    const panelId = boton.getAttribute("aria-controls");
+    const panel = document.getElementById(panelId);
+    if (!panel) return;
+
+    const expandir = typeof abrir === "boolean"
+        ? abrir
+        : boton.getAttribute("aria-expanded") !== "true";
+
+    boton.setAttribute("aria-expanded", String(expandir));
+    panel.hidden = !expandir;
+}
+
+document.querySelectorAll(".section-toggle").forEach(boton => {
+    boton.addEventListener("click", () => alternarSeccion(boton));
+});
+
+// Mostrar cantidades reales a partir de los arreglos existentes.
+document.getElementById("radios-count").textContent = radios.length;
+document.getElementById("tvs-count").textContent = tvs.length;
+document.getElementById("shows-count").textContent = shows.length;
+
+/*=========================================================
   NAVEGACIÓN INFERIOR ESTILO SPOTIFY
 =========================================================*/
 
@@ -967,6 +993,10 @@ navItems.forEach(item => {
         const target = document.getElementById(targetId);
 
         if (!target) return;
+
+        // Si la navegación apunta a una sección plegable, abrirla antes de desplazarse.
+        const toggle = target.querySelector(".section-toggle");
+        if (toggle) alternarSeccion(toggle, true);
 
         navItems.forEach(button => {
             button.classList.remove("activa");
