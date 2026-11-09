@@ -69,6 +69,8 @@ const App = {
 
     estado: CONFIG.estadoInicial,
 
+    tipoReproduccion: null,
+  
     signalX: 20,
 
     signalAnimation: null
@@ -332,6 +334,50 @@ function guardarUltimaRadio(nombre) {
         "ultimaRadio",
         nombre
     );
+
+}
+
+/* =========================================
+   BEATZ - CONTROL DE ICONOS DE NAVEGACIÓN
+========================================= */
+
+function actualizarIconoNav(tipo){
+
+    const botones = document.querySelectorAll(".nav-item");
+
+    botones.forEach(boton => {
+
+        boton.classList.remove(
+            "reproduciendo-radio",
+            "reproduciendo-tv",
+            "reproduciendo-youtube"
+        );
+
+    });
+
+    if(tipo === "radio"){
+
+        document
+            .querySelector('[data-target="radios-section"]')
+            .classList.add("reproduciendo-radio");
+
+    }
+
+    if(tipo === "tv"){
+
+        document
+            .querySelector('[data-target="tv-section"]')
+            .classList.add("reproduciendo-tv");
+
+    }
+
+    if(tipo === "youtube"){
+
+        document
+            .querySelector('[data-target="biblioteca-section"]')
+            .classList.add("reproduciendo-youtube");
+
+    }
 
 }
 
