@@ -219,7 +219,7 @@ const tvs = [
 
     {
         nombre: "M2 Ukraine",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Music_Box_UA_%282018%29.svg/960px-Music_Box_UA_%282018%29.svg.png",
+        logo: "logos/M2.png",
         stream: "https://beatz-musicbox-proxy.oscarlenyk.workers.dev/m2ukraine"
     },
   
