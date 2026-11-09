@@ -1667,3 +1667,101 @@ body {
 .nav-item.reproduciendo-youtube {
     color: #FFFFFF;
 }
+
+
+/*==================================================
+  BEATZ - BLOQUES DESPLEGABLES
+  Añadido sin reemplazar los estilos existentes.
+==================================================*/
+.accordion-section {
+    margin-top: 18px;
+}
+
+.section-toggle {
+    width: 100%;
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--cyan);
+    border-radius: 18px;
+    background: var(--card);
+    color: var(--text);
+    box-shadow: var(--shadow);
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color .25s ease, box-shadow .25s ease, transform .2s ease;
+}
+
+#tv-section .section-toggle { border-left-color: var(--purple); }
+#biblioteca-section .section-toggle { border-left-color: var(--live); }
+
+.section-toggle:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-1px);
+}
+
+.section-toggle:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 3px;
+}
+
+.section-toggle-icon {
+    width: 38px;
+    flex: 0 0 38px;
+    color: var(--cyan);
+    font-size: 30px;
+    line-height: 1;
+    text-align: center;
+}
+#tv-section .section-toggle-icon { color: var(--purple); }
+#biblioteca-section .section-toggle-icon { color: var(--live); }
+
+.section-toggle-title {
+    flex: 1;
+    min-width: 0;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+
+.section-count {
+    min-width: 34px;
+    padding: 5px 9px;
+    border-radius: 999px;
+    background: rgba(127, 140, 160, .18);
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.section-chevron {
+    width: 22px;
+    color: var(--text-secondary);
+    font-size: 25px;
+    line-height: 1;
+    text-align: center;
+    transform: rotate(0deg);
+    transition: transform .25s ease;
+}
+
+.section-toggle[aria-expanded="true"] .section-chevron {
+    transform: rotate(180deg);
+}
+
+.section-panel {
+    padding-top: 12px;
+}
+.section-panel[hidden] { display: none !important; }
+.section-panel .radios-grid { margin-top: 4px; }
+.section-panel #tvPlayer { margin-top: 18px; }
+
+@media (max-width: 380px) {
+    .section-toggle { min-height: 60px; padding: 10px 12px; gap: 9px; }
+    .section-toggle-title { font-size: 14px; }
+    .section-toggle-icon { width: 32px; flex-basis: 32px; font-size: 26px; }
+}
