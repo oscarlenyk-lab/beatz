@@ -215,18 +215,18 @@
      RADIO STATIONS
 ===================================================== -->
 
-<section class="content-section" id="radios-section">
+<section class="content-section accordion-section" id="radios-section">
 
-    <h2 class="section-title">
+    <button class="section-toggle" type="button"
+        aria-expanded="false" aria-controls="radios-panel">
+        <span class="section-toggle-icon" aria-hidden="true">◉</span>
+        <span class="section-toggle-title">Radio Stations</span>
+        <span class="section-count" id="radios-count">0</span>
+        <span class="section-chevron" aria-hidden="true">⌄</span>
+    </button>
 
-        Radio Stations
-
-    </h2>
-
-    <div
-        id="radios"
-        class="radios-grid">
-
+    <div class="section-panel" id="radios-panel" hidden>
+        <div id="radios" class="radios-grid"></div>
     </div>
 
 </section>
@@ -235,26 +235,20 @@
      MUSIC TV
 ===================================================== -->
 
-<section class="content-section" id="tv-section">
+<section class="content-section accordion-section" id="tv-section">
 
-    <h2 class="section-title">
+    <button class="section-toggle" type="button"
+        aria-expanded="false" aria-controls="tv-panel">
+        <span class="section-toggle-icon" aria-hidden="true">▣</span>
+        <span class="section-toggle-title">Music TV</span>
+        <span class="section-count" id="tvs-count">0</span>
+        <span class="section-chevron" aria-hidden="true">⌄</span>
+    </button>
 
-        Music TV
-
-    </h2>
-
-    <div
-        id="tvs"
-        class="radios-grid">
-
+    <div class="section-panel" id="tv-panel" hidden>
+        <div id="tvs" class="radios-grid"></div>
+        <video id="tvPlayer" controls playsinline></video>
     </div>
-
-    <video
-        id="tvPlayer"
-        controls
-        playsinline>
-
-    </video>
 
 </section>
 
@@ -262,18 +256,18 @@
      FEATURED SHOWS
 ===================================================== -->
 
-<section class="content-section" id="biblioteca-section">
+<section class="content-section accordion-section" id="biblioteca-section">
 
-    <h2 class="section-title">
+    <button class="section-toggle" type="button"
+        aria-expanded="false" aria-controls="biblioteca-panel">
+        <span class="section-toggle-icon" aria-hidden="true">▤</span>
+        <span class="section-toggle-title">Featured Shows</span>
+        <span class="section-count" id="shows-count">0</span>
+        <span class="section-chevron" aria-hidden="true">⌄</span>
+    </button>
 
-        Featured Shows
-
-    </h2>
-
-    <div
-        id="shows"
-        class="radios-grid">
-
+    <div class="section-panel" id="biblioteca-panel" hidden>
+        <div id="shows" class="radios-grid"></div>
     </div>
 
 </section>
