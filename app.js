@@ -113,6 +113,27 @@ const radios = [
     },
 
     {
+        nombre: "80s80s",
+        descripcion: "Real 80s Radio",
+        logo: "logos/80s80s.png",
+        stream: "https://streams.80s80s.de/web/mp3-192/streams.80s80s.de/"
+    },
+
+    {
+        nombre: "90s90s Radio",
+        descripcion: "Real 90s Radio",
+        logo: "logos/90s90s.png",
+        stream: "https://streams.90s90s.de/pop/mp3-128/streams.90s90s.de/"
+    },
+
+    {
+        nombre: "Heart Dance",
+        descripcion: "Feel Good Club Classics",
+        logo: "logos/heartdance.png",
+        stream: "https://media-ssl.musicradio.com/HeartDanceMP3"
+    },
+
+    {
         nombre: "Aura FM",
         descripcion: "La energía que suena!",
         logo: "logos/aura.png",
