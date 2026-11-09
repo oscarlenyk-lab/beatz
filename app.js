@@ -133,6 +133,13 @@ const radios = [
         stream: "https://media-ssl.musicradio.com/HeartDanceMP3"
     },
 
+      {
+        nombre: "Trance21",
+        descripcion: "Amsterdam Trance Music",
+        logo: "logos/trance21.png",
+        stream: "https://mscp3.live-streams.nl:8022/radio"
+    }
+
     {
         nombre: "Aura FM",
         descripcion: "La energía que suena!",
