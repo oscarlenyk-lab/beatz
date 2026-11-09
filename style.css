@@ -1626,3 +1626,44 @@ body {
     }
 }
 
+/* =========================================
+   BEATZ - ICONOS ACTIVOS DE NAVEGACIÓN
+========================================= */
+
+.nav-item .nav-icon {
+    transition: color .3s ease, text-shadow .3s ease,
+                transform .3s ease;
+}
+
+.nav-item.reproduciendo-radio .nav-icon {
+    color: #25C8F7;
+    text-shadow:
+        0 0 6px #25C8F7,
+        0 0 14px #4B7BFF,
+        0 0 22px #8C52FF;
+    transform: scale(1.12);
+}
+
+.nav-item.reproduciendo-tv .nav-icon {
+    color: #B46BFF;
+    text-shadow:
+        0 0 6px #8C52FF,
+        0 0 14px #B46BFF,
+        0 0 22px #FF4FA3;
+    transform: scale(1.12);
+}
+
+.nav-item.reproduciendo-youtube .nav-icon {
+    color: #FF4FA3;
+    text-shadow:
+        0 0 6px #FF4FA3,
+        0 0 14px #8C52FF,
+        0 0 22px #25C8F7;
+    transform: scale(1.12);
+}
+
+.nav-item.reproduciendo-radio,
+.nav-item.reproduciendo-tv,
+.nav-item.reproduciendo-youtube {
+    color: #FFFFFF;
+}
